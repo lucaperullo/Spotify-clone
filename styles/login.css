@@ -219,4 +219,7 @@ hr {
   .linktogg.font-bold {
     width: 90vw !important;
   }
+  footer {
+    min-height: 110px;
+  }
 }
