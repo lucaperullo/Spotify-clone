@@ -270,7 +270,7 @@ input[type="checkbox"]:checked + label:before {
 .loading #fake-checkbox {
   border-radius: 50%;
   background: transparent;
-  border-color: #888;
+  border-color: rgb(44, 160, 9);
   border-width: 12px;
   border-style: inset;
   animation: spin 1s infinite linear;
