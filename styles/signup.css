@@ -278,7 +278,7 @@ input[type="checkbox"]:checked + label:before {
   animation: spin 1s infinite linear;
 }
 .checkbox-container {
-  padding-top: 20px;
+  padding-top: 25px;
   padding-left: 10px;
 }
 .pass #fake-checkbox {
