@@ -47,7 +47,7 @@
         <p class="font-bold align-start">What's your email?</p>
         <br />
         <input
-          class="signupinput"
+          class="signupinput input-1"
           placeholder="Enter your email."
           type="text"
         />
@@ -57,7 +57,7 @@
         <p class="font-bold align-start">Confirm your email</p>
         <br />
         <input
-          class="signupinput"
+          class="signupinput input-2"
           placeholder="Enter your email again."
           type="text"
         />
@@ -67,7 +67,7 @@
         <p class="font-bold align-start">Create a password</p>
         <br />
         <input
-          class="signupinput"
+          class="signupinput input-3"
           placeholder="Create a password."
           type="text"
         />
@@ -77,7 +77,7 @@
         <p class="font-bold align-start">You need to enter a password.</p>
         <br />
         <input
-          class="signupinput"
+          class="signupinput input-4"
           placeholder="Enter a profile name."
           type="text"
         />
@@ -87,9 +87,13 @@
         <p class="font-bold align-start">What's your date of birth?</p>
         <br />
         <div style="width: 100%; display: flex" class="row">
-          <input class="signupinput days" type="text" placeholder="DD" />
+          <input
+            class="signupinput input-2 days"
+            type="text"
+            placeholder="DD"
+          />
 
-          <select class="signupinput months" name="MM" form="month">
+          <select class="signupinput input-3 months" name="MM" form="month">
             <option value="" disabled selected>Month</option>
             <option value="January">January</option>
             <option value="February">February</option>
@@ -104,7 +108,11 @@
             <option value="November">November</option>
             <option value="Dicember">Dicember</option>
           </select>
-          <input type="text" class="signupinput years" placeholder="YYYY" />
+          <input
+            type="text"
+            class="signupinput input-4 years"
+            placeholder="YYYY"
+          />
         </div>
 
         <br />
@@ -189,9 +197,9 @@
           </form>
           <div class="reCaptcha">
             <div id="fake-captcha">
-              <div id="fake-checkbox"></div>
               <span style="font-size: 15px" class="font-regular"
-                >I'm not a robot</span
+                ><div id="fake-checkbox"></div>
+                I'm not a robot</span
               >
             </div>
           </div>
@@ -219,5 +227,8 @@
     </div>
     <footer></footer>
     <script src="captcha.js"></script>
+    <script>
+      let inputfield = document.getElementsByClassName("");
+    </script>
   </body>
 </html>
