@@ -229,9 +229,11 @@ input[type="checkbox"]:checked + label:before {
   background-color: #1ed760;
 }
 .reCaptcha {
+  background-image: url("/imgs/captcha.png");
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: row;
-  width: 100%;
+  width: 80%;
   background-color: #f9f9f9;
   height: 75px;
 }
@@ -263,7 +265,7 @@ input[type="checkbox"]:checked + label:before {
 }
 
 #fake-captcha.loading {
-  cursor: default;
+  cursor: no-drop;
   color: #444;
 }
 
@@ -275,7 +277,10 @@ input[type="checkbox"]:checked + label:before {
   border-style: inset;
   animation: spin 1s infinite linear;
 }
-
+.checkbox-container {
+  padding-top: 20px;
+  padding-left: 10px;
+}
 .pass #fake-checkbox {
   background: #1ed760;
   border-color: #669f5600;
@@ -337,5 +342,10 @@ footer {
   }
   .signupinput {
     margin-top: 0;
+  }
+  #fake-captcha {
+    width: 80vw;
+    padding-top: 20px;
+    padding-left: 50px;
   }
 }
