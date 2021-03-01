@@ -219,3 +219,6 @@ input[type="checkbox"]:checked + label:before {
 .green:hover {
   background-color: #1ed760;
 }
+footer {
+  min-height: 20vh;
+}
