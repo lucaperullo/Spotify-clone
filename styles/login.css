@@ -34,6 +34,9 @@ body {
 .btn:focus {
   outline: none;
 }
+.phone-shortcuts {
+  display: none;
+}
 .box > .btn {
   font-size: 14px !important;
   letter-spacing: 2px !important;
@@ -182,4 +185,38 @@ input[type="checkbox"]:checked + label:before {
 hr {
   border-top: 1px solid rgb(219, 219, 219);
   border-bottom: none;
+}
+@media (max-width: 568px) {
+  * {
+    overflow-x: hidden;
+  }
+  .spotify-logo {
+    padding-top: 10px;
+    height: 30px;
+  }
+  .btn {
+    width: 90vw !important;
+  }
+  .container.lines {
+    width: 90vw !important;
+  }
+  .box {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+  .mb-3 {
+    width: 90vw !important;
+  }
+  input {
+    width: 84vw !important;
+  }
+  .endbuttons.lines {
+    width: 99vw !important;
+  }
+  .btn.log {
+    width: 40vw !important;
+  }
+  .linktogg.font-bold {
+    width: 90vw !important;
+  }
 }
