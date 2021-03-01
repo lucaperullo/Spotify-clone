@@ -216,6 +216,9 @@ input[type="checkbox"]:checked + label:before {
   border-color: #1ed760;
   color: #fff;
 }
+.green {
+  background-color: rgb(29, 185, 84);
+}
 .green:hover {
   background-color: #1ed760;
 }
