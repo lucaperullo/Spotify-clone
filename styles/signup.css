@@ -322,3 +322,20 @@ input[type="checkbox"]:checked + label:before {
 footer {
   min-height: 14vh;
 }
+@media (max-width: 569px) {
+  .linktofb {
+    width: 90vw;
+  }
+  .header {
+    width: 99vw;
+  }
+  .align-start {
+    padding-left: 30px;
+  }
+  .writetext-danger {
+    padding-left: 30px;
+  }
+  .signupinput {
+    margin-top: 0;
+  }
+}
