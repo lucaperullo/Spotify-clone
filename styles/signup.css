@@ -216,12 +216,100 @@ input[type="checkbox"]:checked + label:before {
   border-color: #1ed760;
   color: #fff;
 }
+.greenlink:hover {
+  color: #1ed760;
+}
+.greenlink {
+  color: #1db954;
+}
 .green {
   background-color: rgb(29, 185, 84);
 }
 .green:hover {
   background-color: #1ed760;
 }
+.reCaptcha {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: #f9f9f9;
+  height: 75px;
+}
+/* fake captcha */
+#fake-captcha {
+  flex-direction: row;
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+}
+
+#fake-captcha:hover {
+  color: #666;
+}
+
+#fake-checkbox {
+  float: none;
+
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  transition: all 0.2s;
+}
+
+#fake-checkbox:hover {
+  border-color: #aaa;
+  background: #eee;
+}
+
+#fake-captcha.loading {
+  cursor: default;
+  color: #444;
+}
+
+.loading #fake-checkbox {
+  border-radius: 50%;
+  background: transparent;
+  border-color: #888;
+  border-width: 12px;
+  border-style: inset;
+  animation: spin 1s infinite linear;
+}
+
+.pass #fake-checkbox {
+  background: #c1d9a3;
+  border-color: #669f5600;
+}
+
+.pass #fake-checkbox:before {
+  display: block;
+  content: "\2713";
+  font-size: 12px;
+  color: #275f18;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.fail {
+  animation: fail 0.1s 4;
+}
+
+@keyframes fail {
+  50% {
+    color: rgb(190, 206, 45);
+  }
+  100% {
+    background-color: red;
+  }
+}
+/* end of fake captcha */
 footer {
-  min-height: 20vh;
+  min-height: 14vh;
 }
