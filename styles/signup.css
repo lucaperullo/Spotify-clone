@@ -51,6 +51,7 @@
   align-self: flex-start;
 }
 .writetext-danger {
+  display: none;
   align-self: flex-start;
   color: rgb(221, 41, 41);
 }
