@@ -10,7 +10,8 @@ body {
   padding-top: 1.5vw;
 }
 .spotify-logo {
-  height: 59px;
+  height: 60px;
+  margin-top: -5px;
 }
 .box {
   padding-left: 20vh;
@@ -68,13 +69,14 @@ body {
 }
 .linktogg {
   transition: 0.25s ease;
+  padding: 12px 14px 12px;
   border: 2px solid grey;
   display: block;
-  width: 200px;
+
   text-decoration: none;
   color: grey;
   text-align: center;
-  height: 50px;
+  width: 428px;
   border-radius: 50px !important;
 }
 .linktogg:hover {
@@ -89,6 +91,8 @@ body {
   border-radius: 50px;
   height: 48px;
   width: 200px;
+  letter-spacing: 1px;
+  font-size: 14px;
   color: white;
 }
 .btn.log:hover {
@@ -121,7 +125,7 @@ body {
   font-weight: 600;
   border: 1px solid rgb(194, 194, 194);
   margin-top: 10px;
-  width: 450px;
+  width: 432px;
   padding: 7px;
   font-size: 14px;
   line-height: 24px;
