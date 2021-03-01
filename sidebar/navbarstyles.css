@@ -1,0 +1,101 @@
+.font-light{
+    font-family: "Circular Spotify Tx T Light";
+}
+.font-regular{
+    font-family: "Circular Spotify Tx T Black";
+}
+.font-book{
+    font-family: "Circular Spotify Tx T Book";
+}
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #999;
+}
+
+a, a:hover, a:focus i, i:hover, i:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+#sidebar {
+    /* don't forget to add all the previously mentioned styles here too */
+    padding-top: 20px; 
+    display: flex;
+    flex-direction: column;
+    width: 232px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 1;
+    background: rgb(0,0,0);
+    color: grey;
+    transition: all 0.3s;
+}
+#sidebar .sidebar-header{
+    background: inherit;
+    width: 100%;
+    border: 0;
+    margin-bottom: 18px;
+    padding: 0 24px;
+}
+#sidebar .sidebar-header img {
+    width: 100%;
+    max-width: 131px;
+    height: 40px;
+    
+}
+
+#sidebar ul.components.font-book {
+    padding: 20px 7px 5px;
+}
+#sidebar ul.playlistComponents.font-book {
+    padding: 20px 7px 5px;
+    border-bottom: solid grey 1px;
+}
+#sidebar ul.installComponent.font-book {
+    padding: 20px 7px 5px;
+}
+
+#sidebar ul p {
+    color: grey;
+    padding: 10px;
+}
+#sidebar ul li i{
+    display: inline-block;
+}
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: inline-block;
+}
+#sidebar ul li:hover{
+    color: white;
+    background: inherit;
+}
+#sidebar ul li.active:hover{
+    color: white;
+    background: rgb(40,40,40); 
+}
+#sidebar ul li.active{
+    color:grey;
+    background: rgb(40,40,40);
+    border-radius: 5px;
+}
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #6d7fcc;
+}
