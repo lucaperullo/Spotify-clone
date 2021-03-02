@@ -22,39 +22,62 @@
         <!-- Sidebar -->
         <nav id="sidebar">
             <div class="sidebar-header">
-                <img src="/sidebar/images/spotify-logo-branca-white.png" alt="">
+                <a href="" aria-current="page" draggable="false">
+                    <img src="/sidebar/images/spotify-logo-branca-white.png" alt="">
+                </a>
             </div>
     
             <ul class="components font-book">
-                <li class="active">
-                    <i class="fas fa-home"></i>
-                    <a href="">Home</a>
+                <li class="nav active">
+                    <a href="">
+                        <div class="icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <span>Home</span>
+                    </a>
                 </li>
-                <li>
-                    <i class="fas fa-search"></i>
-                    <a href="#">Search</a>
+                <li class="nav">
+                    
+                    <a href="#">
+                        <div class="icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        Search</a>
                 </li>
-                <li>
-                    <i class="fas fa-record-vinyl"></i>
-                    <a href="">Your Library</a> 
+                <li class="nav">
+                    
+                    <a href="">
+                        <div class="icon">
+                            <i class="fas fa-record-vinyl"></i>
+                        </div>
+                        Your Library</a> 
                 </li>
             </ul>
+            <div class="playlistContainer">
+                <div class="playlistsHeader">
+                    <h1>
+                        Playlists
+                    </h1>
+                        <div class="createPlaylist">
+                            <button type="button">
+                            <i class="fas fa-plus-square fa-2x"></i>
+                            <span>Create Playlist</span>
+                            </button>
+                        </div>
+                        <div class="likedSongs">
+                            <button type="button">
+                                <i class="fas fa-heart fa-2x"></i>
+                                <span>Liked Songs</span>
+                            </button>
+                        </div>
+                <hr class="spot">
 
-            <ul class="playlistComponents font-book">
-                <h6 style="padding-bottom: 8px;">PLAYLISTS</h6>
-                <li>
-                    <i class="fas fa-plus-square fa-2x"></i>
-                    <a href="">Create Playlist</a>
-                </li>
-                <li>
-                    <i class="fas fa-heart fa-2x"></i>
-                    <a href="">Liked Songs</a>
-                </li>
-            </ul>
-
-            <div>
+                <div>
                 <p>User Playlists will be read into this div</p>
+                </div>
+                
             </div>
+        </div>
 
             <ul class="installComponent font-book">
                 <li>
