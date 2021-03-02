@@ -50,11 +50,15 @@
         <p class="font-bold align-start">What's your email?</p>
         <br />
         <input
+          onchange="ValidateEmail()"
           class="signupinput input-1"
           placeholder="Enter your email."
           type="text"
         />
-        <p style="margin-top: 2px" class="writetext-danger font-regular">
+        <p
+          style="margin-top: 2px"
+          class="writetext-danger danger-1 font-regular"
+        >
           ⚠ You need to enter your email.
         </p>
         <p class="font-bold align-start">Confirm your email</p>
@@ -64,7 +68,10 @@
           placeholder="Enter your email again."
           type="text"
         />
-        <p style="margin-top: 2px" class="writetext-danger font-regular">
+        <p
+          style="margin-top: 2px"
+          class="writetext-danger danger-2 font-regular"
+        >
           ⚠ You need to confirm your email.
         </p>
         <p class="font-bold align-start">Create a password</p>
@@ -74,7 +81,10 @@
           placeholder="Create a password."
           type="text"
         />
-        <p style="margin-top: 2px" class="writetext-danger font-regular">
+        <p
+          style="margin-top: 2px"
+          class="writetext-danger danger-3 font-regular"
+        >
           ⚠ You need to enter a password.
         </p>
         <p class="font-bold align-start">You need to enter a password.</p>
@@ -84,19 +94,22 @@
           placeholder="Enter a profile name."
           type="text"
         />
-        <p style="margin-top: 2px" class="writetext-danger font-regular">
+        <p
+          style="margin-top: 2px"
+          class="writetext-danger danger-4 font-regular"
+        >
           ⚠ Enter a name for your profile.
         </p>
         <p class="font-bold align-start">What's your date of birth?</p>
         <br />
         <div style="width: 100%; display: flex" class="row">
           <input
-            class="signupinput input-2 days"
+            class="signupinput input-5 days"
             type="text"
             placeholder="DD"
           />
 
-          <select class="signupinput input-3 months" name="MM" form="month">
+          <select class="signupinput input-6 months" name="MM" form="month">
             <option value="" disabled selected>Month</option>
             <option value="January">January</option>
             <option value="February">February</option>
@@ -113,20 +126,29 @@
           </select>
           <input
             type="text"
-            class="signupinput input-4 years"
+            class="signupinput input-7 years"
             placeholder="YYYY"
           />
         </div>
 
         <br />
 
-        <p style="margin-top: 2px" class="writetext-danger font-regular">
+        <p
+          style="margin-top: 2px"
+          class="writetext-danger danger-5 font-regular"
+        >
           ⚠ Enter a valid day of the month.
         </p>
-        <p style="margin-top: -10px" class="writetext-danger font-regular">
+        <p
+          style="margin-top: -10px"
+          class="writetext-danger danger-6 font-regular"
+        >
           ⚠ Select your birth month.
         </p>
-        <p style="margin-top: -10px" class="writetext-danger font-regular">
+        <p
+          style="margin-top: -10px"
+          class="writetext-danger danger-7 font-regular"
+        >
           ⚠ Enter a valid year.
         </p>
         <p class="font-bold align-start">What's your gender?</p>
@@ -228,9 +250,7 @@
       </div>
     </div>
     <footer></footer>
-    <script src="captcha.js"></script>
-    <script>
-      let inputfield = document.getElementsByClassName("");
-    </script>
+    <script src="../captcha.js"></script>
+    <script src="../form.js"></script>
   </body>
 </html>

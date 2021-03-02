@@ -55,6 +55,9 @@
   align-self: flex-start;
   color: rgb(221, 41, 41);
 }
+.danger-input {
+  display: block !important;
+}
 .signinput-danger {
   border: 1px solid rgb(221, 41, 41);
 }
