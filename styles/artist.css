@@ -114,6 +114,23 @@ div.main div.button-container div.button-row button.toggle{
     color: hsla(0,0%,100%,.6);
     padding: 0;
 }
+div.track-info{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+div.track-container h2{
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: -.04em;
+    text-transform: none;
+    margin: 0 0 20px;
+}
+div.track-info div.track-container{
+    flex: 1 1 400px;
+}
 ul.popular-tracks-list{
     list-style: none;
     height: 280px;
@@ -123,4 +140,21 @@ ul.popular-tracks-list li.track{
     border: 1px solid transparent;
     border-radius: 4px;
     position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+ul.popular-tracks-list li.track span, button{
+    display: inline-block;
+    position: relative;
+}
+ul.popular-tracks-list li.track span.numbers{
+    color: #b3b3b3;
+    width: 16px;
+    min-width: 16px;
+    min-height: 16px;
+}
+ul.popular-tracks-list li.track span.title{
+    color: #fff;
+    font-weight: 500;
 }
