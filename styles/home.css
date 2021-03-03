@@ -817,10 +817,42 @@ th {
   margin-left: 20px;
   list-style: none;
 }
+
+.music-options {
+  display: flex;
+}
+.songbar-title:hover {
+  text-decoration: underline !important;
+}
+.songbar-title {
+  font-size: 14px;
+  line-height: 16px;
+}
+.artist-little:hover {
+  color: white !important;
+  text-decoration: underline !important;
+}
+.artist-little {
+  font-size: 11px !important;
+  line-height: 16px;
+  color: rgb(175, 175, 175) !important;
+}
+.title-artist-col {
+  margin-left: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 40px;
+}
+.cover-img-small {
+  height: 55px;
+}
 .music-bar-spotify {
-  border-top: 1px solid black;
+  padding: 17px;
+  border-top: 1px solid rgb(58, 57, 57);
+
   position: absolute;
-  bottom: 0;
+  bottom: 0px;
   background-color: #181818;
   width: 100%;
   z-index: 10;
@@ -923,13 +955,16 @@ th {
 }
 
 @media (max-width: 680px) {
+  .music-bar-spotify {
+    bottom: 50px !important;
+  }
   .responsive-navbar {
     left: 0px;
     display: flex;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    width: 100%;
+    width: 102%;
   }
   #sidebar {
     display: none;
@@ -963,7 +998,7 @@ th {
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    width: 100%;
+    width: 102%;
   }
 }
 @media (max-width: 339px) {
@@ -971,6 +1006,6 @@ th {
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    width: 100%;
+    width: 102%;
   }
 }
