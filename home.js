@@ -1,12 +1,23 @@
+const navbar = document.getElementById("navbuttons-top");
 const navColorOnScroll = () => {
-  let navbar = document.getElementById("navbuttons-top");
   const main = document.getElementById("main");
+
   const horizontalScroll = main.scrollTop == true;
   const middle = main.scroll;
   if (horizontalScroll !== true) {
     navbar.style.backgroundColor = "#13161998";
   }
   console.log(horizontalScroll);
+};
+
+const main = document.querySelector("#main");
+
+const _navColorOnScroll = () => {
+  const { scrollTop, scrollHeight, clientHeight } = main;
+  const ratio = scrollTop / (scrollHeight - clientHeight);
+
+  navbar.style.backgroundColor = `rgba(1, 1, 1, ${ratio})`;
+  console.log(navbar.style.backgroundColor);
 };
 
 const displayDropdown = () => {

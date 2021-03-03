@@ -475,6 +475,7 @@ i:focus {
   width: 100%;
   padding: 5px 23px;
 }
+
 #sidebar div.playlistContainer div button svg {
   margin-right: 16px;
   background: #fff;
@@ -488,18 +489,16 @@ i:focus {
 #sidebar div.playlistContainer div button div.heartDiv {
   margin-right: 16px;
   background: linear-gradient(135deg, #450af5, #c4efd9);
-  color: #fff;
+  color: linear-gradient(135deg, #450af5, #c4efd9);
   width: 32px;
   height: 32px;
-  padding: 4px;
+
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  fill: #000;
 }
 #sidebar div.playlistContainer div button div.heartDiv svg.heart {
-  fill: currentcolor;
-  height: 16;
-  width: 16;
+  background: transparent !important;
+  fill: white;
 }
 #sidebar div.playlistContainer div button span {
   text-align: left;
