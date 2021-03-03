@@ -155,7 +155,7 @@
         <div onscroll="_navColorOnScroll()" id="main">
           <div id="navbuttons-top">
             <div class="arrows">
-              <button class="arrow-button">
+              <button onclick="history.go(-1)" class="arrow-button">
                 <svg
                   role="img"
                   focusable="false"
@@ -172,7 +172,7 @@
                   ></polyline>
                 </svg>
               </button>
-              <button class="arrow-button">
+              <button onclick="history.go(+1)" class="arrow-button">
                 <svg
                   role="img"
                   focusable="false"
