@@ -1,3 +1,4 @@
+const likedSongs = [];
 async function getAlbums() {
   let search = document.querySelector(".spoti-search").value;
   const response = await fetch(
@@ -55,11 +56,23 @@ const submitSearch = () => {
     }
   });
 };
-const albums = [14532191, 14984547, 6966955, 61419582];
-async function showAlbums() {
+const showData = () => {
+  const albums = [
+    "6966955",
+    "61419582",
+    "7090505",
+    "103248",
+    "119606",
+    "212377",
+    "212377",
+  ];
+  albums.forEach((element) => {
+    showAlbums(element);
+  });
+};
+async function showAlbums(id) {
   const response = await fetch(
-    "https://deezerdevs-deezer.p.rapidapi.com/album/" +
-      albums[Math.floor(Math.random() * 1)], //query
+    "https://deezerdevs-deezer.p.rapidapi.com/album/" + id, //query
     {
       headers: {
         "x-rapidapi-key": "747030d749msh471c14b186c043cp1cfee9jsn05041c6abfa1",
