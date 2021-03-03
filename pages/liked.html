@@ -44,8 +44,8 @@
             </a>
           </div>
           <ul class="components font-book">
-            <li class="nav active">
-              <a href="">
+            <li class="nav">
+              <a href="./home.html">
                 <div class="icon">
                   <svg
                     viewBox="0 0 512 512"
@@ -54,7 +54,7 @@
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M448 463.746h-149.333v-149.333h-85.334v149.333h-149.333v-315.428l192-111.746 192 110.984v316.19z"
+                      d="M 256.274 60.84 L 84.324 166.237 L 84.324 443.063 L 193.27 443.063 L 193.27 293.73 L 320.228 293.73 L 320.228 443.063 L 428.222 443.063 L 428.222 165.476 L 256.274 60.84 Z M 256.274 35.95 L 448.452 149.145 L 448.452 464.395 L 300 464.395 L 300 315.062 L 213.499 315.062 L 213.499 464.395 L 64.095 464.395 L 64.095 150.161 L 256.274 35.95 Z"
                       fill="currentColor"
                     ></path>
                   </svg>
@@ -116,25 +116,23 @@
                 </button>
               </div>
               <div class="likedSongs">
-                <a href="./liked.html">
-                  <button type="button">
-                    <div class="heartDiv">
-                      <svg
-                        class="heart"
-                        role="img"
-                        height="16"
-                        width="16"
-                        viewBox="0 0 16 16"
-                      >
-                        <path fill="none" d="M0 0h16v16H0z"></path>
-                        <path
-                          d="M13.797 2.727a4.057 4.057 0 00-5.488-.253.558.558 0 01-.31.112.531.531 0 01-.311-.112 4.054 4.054 0 00-5.487.253c-.77.77-1.194 1.794-1.194 2.883s.424 2.113 1.168 2.855l4.462 5.223a1.791 1.791 0 002.726 0l4.435-5.195a4.052 4.052 0 001.195-2.883 4.057 4.057 0 00-1.196-2.883z"
-                        ></path>
-                      </svg>
-                    </div>
-                    <span>Liked Songs</span>
-                  </button></a
-                >
+                <button type="button">
+                  <div class="heartDiv">
+                    <svg
+                      class="heart"
+                      role="img"
+                      height="16"
+                      width="16"
+                      viewBox="0 0 16 16"
+                    >
+                      <path fill="none" d="M0 0h16v16H0z"></path>
+                      <path
+                        d="M13.797 2.727a4.057 4.057 0 00-5.488-.253.558.558 0 01-.31.112.531.531 0 01-.311-.112 4.054 4.054 0 00-5.487.253c-.77.77-1.194 1.794-1.194 2.883s.424 2.113 1.168 2.855l4.462 5.223a1.791 1.791 0 002.726 0l4.435-5.195a4.052 4.052 0 001.195-2.883 4.057 4.057 0 00-1.196-2.883z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <span style="text-shadow: 0px 0px 6px">Liked Songs</span>
+                </button>
               </div>
               <hr class="spot" />
 
@@ -152,7 +150,7 @@
           </ul>
         </div>
         <div id="resizer"></div>
-        <div onscroll="_navColorOnScrollHOME()" id="main">
+        <div onscroll="_navColorOnScroll_LIKED()" id="main">
           <div id="navbuttons-top">
             <div class="arrows">
               <button class="arrow-button">
@@ -218,167 +216,90 @@
             </div>
           </div>
           <div id="main-content">
-            <div class="box">
-              <nav class="navbar"></nav>
-              <div class="container-fluid main-content">
-                <h2 class="timeofdaysection section-category font-bold">
-                  Good afternoon
-                </h2>
-                <div style="width: 100%" class="row">
-                  <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card-box">
-                      <div class="music-card">
-                        <img
-                          class="music-pic-small"
-                          onmouseover="changeBackgroundColor()"
-                          onmouseout="removeGradient()"
-                          src="https://i.scdn.co/image/6394615957f0c7c768e7e8432c20a5062c548423"
-                          height="80"
-                          width="80"
-                          alt=""
-                        />
-                        <div class="music-text">
-                          <p class="music-title font-chubby">Skillet</p>
-                          <img class="play-icon" src="/imgs/play.svg" alt="" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            <header class="sticky-bg">
+              <div class="header-content">
+                <img
+                  src="https://t.scdn.co/images/3099b3803ad9496896c43f22fe9be8c4.png"
+                  alt=""
+                />
+                <br />
 
-                <h3 class="section-category font-bold">Recently played</h3>
-                <div class="container-fluid">
-                  <div class="row" style="width: 100%">
-                    <div class="col-8 music-album-card bg">
-                      <div class="bgSpotify">
-                        <div class="divCover">
-                          <div
-                            class="coverImg"
-                            style="background-image: url('/WeBeVibin.jpg')"
-                          >
-                            <div>
-                              <img
-                                aria-hidden="false"
-                                draggable="false"
-                                loading="lazy"
-                                src="https://cdn.discordapp.com/attachments/815874408832303134/816320596434485308/WeBeVibin.jpg"
-                                alt=""
-                              />
-                            </div>
-                          </div>
-                          <div class="buttonDiv">
-                            <button class="playButton">
-                              <svg
-                                height="16"
-                                role="img"
-                                width="16"
-                                viewBox="0 0 24 24"
-                                aria-hidden="true"
-                              >
-                                <rect
-                                  x="5"
-                                  y="3"
-                                  width="4"
-                                  height="18"
-                                  fill="currentColor"
-                                ></rect>
-                                <rect
-                                  x="15"
-                                  y="3"
-                                  width="4"
-                                  height="18"
-                                  fill="currentColor"
-                                ></rect>
-                              </svg>
-                            </button>
-                          </div>
-                        </div>
-                        <div class="card-body">
-                          <a class="title" href="">
-                            <div class="titleScroll">We Be Vibin'</div>
-                          </a>
-                          <div class="info">
-                            <span>Only good vibes here!</span>
-                          </div>
-                        </div>
-                      </div>
+                <div class="text-wrapper-header">
+                  <h2 class="small">PLAYLIST</h2>
+
+                  <h1 style="font-size: 70px" class="font-bold">Liked Songs</h1>
+                  <div class="row">
+                    <div class="col-sm-1">
+                      <img
+                        style="height: 30px; width: 30px; border-radius: 50%"
+                        src="https://cdn.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png"
+                        alt=""
+                      />
                     </div>
+                    <div class="col-sm-6"><p>Luca Perullo</p></div>
                   </div>
                 </div>
               </div>
+            </header>
+            <div id="magic-container" class="container-fluid">
+              <button
+                class="play-button-liked"
+                aria-label="Play"
+                data-testid="play-button"
+                title="Play"
+                style="--size: 56px"
+              >
+                <svg
+                  height="28"
+                  role="img"
+                  width="28"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <polygon
+                    points="21.57 12 5.98 3 5.98 21 21.57 12"
+                    fill="currentColor"
+                  ></polygon>
+                </svg>
+              </button>
+              <table class="table ">
+                <thead>
+                  <tr style="background-color: transparent!important">
+                      
+                    <th scope="col"># TITLE</th>
+                    <th scope="col">ALBUM</th>
+                    <th scope="col">DATE ADDED</th>
+                    <th scope="col"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M7.999 3H6.999V7V8H7.999H9.999V7H7.999V3ZM7.5 0C3.358 0 0 3.358 0 7.5C0 11.642 3.358 15 7.5 15C11.642 15 15 11.642 15 7.5C15 3.358 11.642 0 7.5 0ZM7.5 14C3.916 14 1 11.084 1 7.5C1 3.916 3.916 1 7.5 1C11.084 1 14 3.916 14 7.5C14 11.084 11.084 14 7.5 14Z" fill="currentColor"></path></svg></th>
+                 
+                </tr>
+                  
+                </thead>
+                <tbody>
+                  <tr style="background-color: transparent!important;">
+                   
+                    <td colspan="5" class="table"><hr style="background-color:rgba(255, 255, 255, 0.377)"></td>
+                    
+                    
+                  </tr>
+                  <tr>
+                    <th scope="row">2 <div class="row orplay"></div></th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                  </tr>
+                </tbody>
+                
+              </table>
+              
             </div>
-            <ul class="responsive-navbar">
-              <li class="nav">
-                <a href="./home.html">
-                  <div class="iconHome">
-                    <svg
-                      viewBox="0 0 512 512"
-                      width="24"
-                      height="24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M448 463.746h-149.333v-149.333h-85.334v149.333h-149.333v-315.428l192-111.746 192 110.984v316.19z"
-                        fill="currentColor"
-                      ></path>
-                    </svg>
-                  </div>
-                  <span>Home</span>
-                </a>
-              </li>
-              <li class="nav">
-                <a href="./search.html">
-                  <div class="iconSearch">
-                    <svg
-                      viewBox="0 0 512 512"
-                      width="24"
-                      height="24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M349.714 347.937l93.714 109.969-16.254 13.969-93.969-109.969q-48.508 36.825-109.207 36.825-36.826 0-70.476-14.349t-57.905-38.603-38.603-57.905-14.349-70.476 14.349-70.476 38.603-57.905 57.905-38.603 70.476-14.349 70.476 14.349 57.905 38.603 38.603 57.905 14.349 70.476q0 37.841-14.73 71.619t-40.889 58.921zM224 377.397q43.428 0 80.254-21.461t58.286-58.286 21.461-80.254-21.461-80.254-58.286-58.285-80.254-21.46-80.254 21.46-58.285 58.285-21.46 80.254 21.46 80.254 58.285 58.286 80.254 21.461z"
-                        fill="currentColor"
-                        fill-rule="evenodd"
-                      ></path>
-                    </svg>
-                  </div>
-                  Search</a
-                >
-              </li>
-              <li class="nav">
-                <a href="./library.html">
-                  <div class="iconLib">
-                    <svg
-                      viewBox="0 0 512 512"
-                      width="24"
-                      height="24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M291.301 81.778l166.349 373.587-19.301 8.635-166.349-373.587zM64 463.746v-384h21.334v384h-21.334zM192 463.746v-384h21.334v384h-21.334z"
-                        fill="currentColor"
-                      ></path>
-                    </svg>
-                  </div>
-                  Your Library</a
-                >
-              </li>
-              <li class="nav">
-                <a
-                  href="https://play.google.com/store/apps/details?id=com.spotify.music&hl=en"
-                  target="_blank"
-                >
-                  <div class="iconDownload">
-                    <img
-                      class="download-logo"
-                      src="https://img.icons8.com/plasticine/2x/spotify.png"
-                      alt=""
-                    />
-                  </div>
-                  Download
-                </a>
-              </li>
-            </ul>
+           
+
+            </div>
           </div>
         </div>
       </div>

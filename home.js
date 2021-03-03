@@ -1,11 +1,18 @@
 const navbar = document.getElementById("navbuttons-top");
 const main = document.querySelector("#main");
 
-const _navColorOnScroll = () => {
+const _navColorOnScrollHOME = () => {
   const { scrollTop, scrollHeight, clientHeight } = main;
   const ratio = scrollTop / (scrollHeight - clientHeight);
 
-  navbar.style.backgroundColor = `rgba(1, 1, 1, ${ratio})`;
+  navbar.style.backgroundColor = `rgba(7, 7, 7, ${ratio})`;
+  console.log(navbar.style.backgroundColor);
+};
+const _navColorOnScroll_LIKED = () => {
+  const { scrollTop, scrollHeight, clientHeight } = main;
+  const ratio = scrollTop / (scrollHeight - clientHeight);
+
+  navbar.style.backgroundColor = `rgba(32, 22, 64, ${ratio})`;
   console.log(navbar.style.backgroundColor);
 };
 
