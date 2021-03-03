@@ -8,6 +8,13 @@ const _navColorOnScrollHOME = () => {
   navbar.style.backgroundColor = `rgba(7, 7, 7, ${ratio})`;
   console.log(navbar.style.backgroundColor);
 };
+const _navColorOnScroll = () => {
+  const { scrollTop, scrollHeight, clientHeight } = main;
+  const ratio = scrollTop / (scrollHeight - clientHeight);
+
+  navbar.style.backgroundColor = `rgba(7, 70, 7, ${ratio})`;
+  console.log(navbar.style.backgroundColor);
+};
 const _navColorOnScroll_LIKED = () => {
   const { scrollTop, scrollHeight, clientHeight } = main;
   const ratio = scrollTop / (scrollHeight - clientHeight);
