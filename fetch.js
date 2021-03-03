@@ -20,12 +20,16 @@ const displayResults = (data) => {
   div.innerHTML = "";
   data.forEach((element) => {
     let text = document.createElement("div");
-    let texty = document.createElement("span");
+    let texty = document.createElement("p");
     let card = document.createElement("div");
     let img = document.createElement("img");
+    let cardContainer = document.createElement("div");
+    let containerCardContainer = document.createElement("div");
+    cardContainer.classList.add("card-container-spotify");
+    containerCardContainer.classList.add("col-8");
     img.classList.add("card-image");
-    card.classList.add("col-8");
     card.classList.add("card-body");
+    texty.classList.add("card-text");
     texty.innerText = `${element.album.title}`;
     text.classList.add("info");
     img.setAttribute("src", element.album.cover);
@@ -35,7 +39,9 @@ const displayResults = (data) => {
 
     text.appendChild(texty);
     card.appendChild(text);
-    div.appendChild(card);
+    cardContainer.appendChild(card);
+    containerCardContainer.appendChild(cardContainer);
+    div.appendChild(containerCardContainer);
   });
 };
 const submitSearch = () => {
