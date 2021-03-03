@@ -696,13 +696,24 @@ div.card-body div.info span {
   color: white;
 }
 .card-container-spotify {
+  border-radius: 8px;
   width: 150px;
   padding: 10px;
-  background-color: rgba(128, 128, 128, 0.205);
+  background-color: rgba(128, 128, 128, 0.055);
   margin-bottom: 10px;
   margin-right: 10px;
 }
-
+.card-container-spotify:hover {
+  background-color: rgba(128, 128, 128, 0.178);
+}
+.card-container-spotify:hover > .playicon {
+  display: block;
+}
+.browse-all {
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 200px;
+}
 .sticky-bg {
   height: 80vh;
   background: rgb(79, 56, 159);
@@ -879,6 +890,9 @@ th {
   height: 25px;
   margin-left: 25px;
 }
+#searchResults {
+  padding: 20px;
+}
 .responsive-navbar > li > a > .iconHome {
   margin-left: 10px;
 }
@@ -889,6 +903,7 @@ th {
   margin-left: 25px;
 }
 /* MEDIA QUERIES */
+
 @media (max-width: 1591px) {
   .card-image {
     width: 12vw;
@@ -900,6 +915,7 @@ th {
     width: 21%;
   }
 }
+
 @media (max-width: 1291px) {
   .spoti-search {
     width: 25vw;
@@ -914,6 +930,7 @@ th {
     width: 23%;
   }
 }
+
 @media (max-width: 1000px) {
   .header-content {
     justify-content: center;

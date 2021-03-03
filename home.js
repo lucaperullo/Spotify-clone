@@ -5,21 +5,21 @@ const _navColorOnScrollHOME = () => {
   const { scrollTop, scrollHeight, clientHeight } = main;
   const ratio = scrollTop / (scrollHeight - clientHeight);
 
-  navbar.style.backgroundColor = `rgba(7, 7, 7, ${ratio})`;
+  navbar.style.backgroundColor = `rgba(7, 7, 7, ${ratio * 10})`;
   console.log(navbar.style.backgroundColor);
 };
 const _navColorOnScroll = () => {
   const { scrollTop, scrollHeight, clientHeight } = main;
   const ratio = scrollTop / (scrollHeight - clientHeight);
 
-  navbar.style.backgroundColor = `rgba(7, 70, 7, ${ratio})`;
+  navbar.style.backgroundColor = `rgba(7, 7, 7, ${ratio * 10})`;
   console.log(navbar.style.backgroundColor);
 };
 const _navColorOnScroll_LIKED = () => {
   const { scrollTop, scrollHeight, clientHeight } = main;
   const ratio = scrollTop / (scrollHeight - clientHeight);
 
-  navbar.style.backgroundColor = `rgba(32, 22, 64, ${ratio})`;
+  navbar.style.backgroundColor = `rgba(32, 22, 64, ${ratio * 10})`;
   console.log(navbar.style.backgroundColor);
 };
 
