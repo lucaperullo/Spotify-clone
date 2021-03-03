@@ -475,6 +475,7 @@ i:focus {
   width: 100%;
   padding: 5px 23px;
 }
+
 #sidebar div.playlistContainer div button svg {
   margin-right: 16px;
   background: #fff;
@@ -488,18 +489,16 @@ i:focus {
 #sidebar div.playlistContainer div button div.heartDiv {
   margin-right: 16px;
   background: linear-gradient(135deg, #450af5, #c4efd9);
-  color: #fff;
+  color: linear-gradient(135deg, #450af5, #c4efd9);
   width: 32px;
   height: 32px;
-  padding: 4px;
+
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  fill: #000;
 }
 #sidebar div.playlistContainer div button div.heartDiv svg.heart {
-  fill: currentcolor;
-  height: 16;
-  width: 16;
+  background: transparent !important;
+  fill: white;
 }
 #sidebar div.playlistContainer div button span {
   text-align: left;
@@ -686,4 +685,162 @@ div.card-body div.info span {
 }
 .searchTitle {
   color: white;
+}
+.card-container-spotify {
+  width: 150px;
+  padding: 10px;
+  background-color: rgba(128, 128, 128, 0.205);
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+.card-text {
+  color: white;
+  margin-top: 16px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.responsive-navbar > li {
+  color: white;
+  margin-left: 20px;
+  list-style: none;
+}
+.responsive-navbar {
+  display: none;
+  border-top: 1px solid black;
+  z-index: 2;
+  margin-bottom: 0;
+
+  justify-content: space-evenly;
+  flex-direction: row;
+  position: fixed;
+  padding-left: 0;
+  margin-left: -10px;
+  bottom: 0px;
+  height: 50px;
+  width: 78%;
+  background-color: #151b19;
+}
+.download-logo {
+  width: 26px;
+  height: 25px;
+  margin-left: 25px;
+}
+.responsive-navbar > li > a > .iconHome {
+  margin-left: 10px;
+}
+.responsive-navbar > li > a > .iconSearch {
+  margin-left: 12px;
+}
+.responsive-navbar > li > a > .iconLib {
+  margin-left: 25px;
+}
+/* MEDIA QUERIES */
+@media (max-width: 1591px) {
+  .card-image {
+    width: 12vw;
+  }
+  .card-container-spotify {
+    width: 14vw;
+  }
+  .col-8 {
+    width: 21%;
+  }
+}
+@media (max-width: 1291px) {
+  .spoti-search {
+    width: 25vw;
+  }
+  .card-image {
+    width: 12vw;
+  }
+  .card-container-spotify {
+    width: 14vw;
+  }
+  .col-8 {
+    width: 23%;
+  }
+}
+@media (max-width: 1000px) {
+  .spoti-search {
+    width: 20vw;
+  }
+  #sidebar {
+    max-width: 220px;
+  }
+  .card-image {
+    width: 10vw;
+  }
+  .card-container-spotify {
+    width: 12vw;
+  }
+  .col-8 {
+    width: 25%;
+  }
+}
+@media (max-width: 924px) {
+  #sidebar {
+    max-width: 200px;
+  }
+  .card-image {
+    width: 16vw;
+  }
+  .card-container-spotify {
+    width: 19vw;
+  }
+  .col-8 {
+    width: 30%;
+  }
+}
+@media (max-width: 680px) {
+  .responsive-navbar {
+    left: 0px;
+    display: flex;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+  }
+  #sidebar {
+    display: none;
+  }
+  .card-image {
+    width: 18vw;
+  }
+  .card-container-spotify {
+    width: 22vw;
+  }
+  .col-8 {
+    width: 32%;
+  }
+}
+@media (max-width: 600px) {
+  #sidebar {
+    display: none;
+  }
+  .card-image {
+    width: 25vw;
+  }
+  .card-container-spotify {
+    width: 28vw;
+  }
+  .col-8 {
+    width: 40%;
+  }
+}
+@media (max-width: 460px) {
+  .responsive-navbar {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+  }
+}
+@media (max-width: 339px) {
+  .responsive-navbar {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+  }
 }

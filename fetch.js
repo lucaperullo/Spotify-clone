@@ -4,34 +4,54 @@ async function getAlbums() {
     "https://deezerdevs-deezer.p.rapidapi.com/search?q=" + search, //query
     {
       headers: {
-        "x-rapidapi-key": "e9b9106675msh62ec03f6e269d2bp16d6d0jsn53123e2f4694",
+        "x-rapidapi-key": "99c24a2298msh5eccc99e454a6b5p187b5ejsn3147aee2593b",
         "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
       },
     }
   );
   const data = await response.json();
-  console.log(data.data);
-  //   displayResults(data);
+  console.log(data);
+  displayResults(data.data);
   return data;
 }
 const displayResults = (data) => {
-  let div = document.querySelector(".searchResults");
+  let div = document.querySelector("#searchResults");
 
   div.innerHTML = "";
   data.forEach((element) => {
-    let div2 = document.createElement("div");
-    div2.classList.add("row");
-    let card = document.createElement("div").classList.add("card-body");
+    let text = document.createElement("div");
+    let texty = document.createElement("p");
+    let card = document.createElement("div");
     let img = document.createElement("img");
+    let cardContainer = document.createElement("div");
+    let containerCardContainer = document.createElement("div");
+    cardContainer.classList.add("card-container-spotify");
+    containerCardContainer.classList.add("col-8");
     img.classList.add("card-image");
-    card.classList.add("col-sm-12");
-    card.innerText = `${element.album.title}`;
-
+    card.classList.add("card-body");
+    texty.classList.add("card-text");
+    texty.innerText = `${element.album.title}`;
+    text.classList.add("info");
     img.setAttribute("src", element.album.cover);
     img.classList.add("search-result");
 
-    div2.appendChild(img);
-    div2.appendChild(card);
-    div.appendChild(div2);
+    card.appendChild(img);
+
+    text.appendChild(texty);
+    card.appendChild(text);
+    cardContainer.appendChild(card);
+    containerCardContainer.appendChild(cardContainer);
+    div.appendChild(containerCardContainer);
+  });
+};
+const submitSearch = () => {
+  const input = document.querySelector(".spoti-search");
+  console.log(input);
+  input.addEventListener("keydown", function (event) {
+    if (event.keyCode === 13) {
+      console.log("hi");
+
+      getAlbums();
+    }
   });
 };
