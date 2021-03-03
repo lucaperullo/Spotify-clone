@@ -681,6 +681,7 @@ div.card-body div.info span {
   width: 360px;
 }
 .form-search {
+  height: 30px !important;
   position: relative;
 }
 .form-search input {
@@ -759,7 +760,6 @@ th {
   transform: scale(1.1);
 }
 #magic-container {
-  height: 100vh;
   background-color: rgba(0, 0, 0, 0.103);
   padding: 30px;
   position: absolute;
@@ -772,6 +772,7 @@ th {
   color: white;
 }
 .header-content > img {
+  box-shadow: 0px 0px 20px rgba(3, 3, 3, 0.63);
   height: 200px;
 }
 
