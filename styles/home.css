@@ -97,12 +97,16 @@ body {
   padding: 0 24px;
 }
 #navbuttons-top {
+  background-color: #13161998;
+  z-index: 1;
+  top: 0;
+  position: sticky;
   padding-left: 30px !important;
   display: flex;
   align-items: center;
   justify-content: space-between;
   transition: 0.25s ease;
-  background-color: rgb(17, 17, 17);
+  background-color: rgba(17, 17, 17, 0);
   padding: 0;
   margin: 0;
   width: 100%;
@@ -110,9 +114,7 @@ body {
 
   margin-top: -1px;
 }
-#navbuttons-top:hover {
-  background-color: rgb(121, 134, 204);
-}
+
 .upgrade-pro {
   margin-right: 50px;
   font-size: 12px;
@@ -157,8 +159,47 @@ body {
   border-radius: 40px;
   width: 140px;
 }
+.account-infobox {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
 .owner {
+  cursor: pointer;
   align-self: center;
+}
+.hover-profile-link > p {
+  margin: 0;
+}
+.hover-profile-link {
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.hover-profile-link:hover {
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.123);
+}
+.dropdown-log > li {
+  list-style: none;
+}
+.dropdown-log {
+  border-radius: 4px;
+  padding: 10px;
+  width: 160px;
+  display: none;
+
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  z-index: 1;
+  background-color: #3e3e3e;
+  position: absolute;
+  top: 50px;
+  right: 50px;
 }
 .timeofdaysection {
   margin-top: 60px !important;
@@ -168,9 +209,12 @@ body {
   display: flex;
 }
 .navbar {
-  background-image: linear-gradient(rgba(238, 202, 202, 0.6), #131518);
-  -webkit-transition: background 1s ease;
-  transition: background 1s ease;
+  margin-top: -200px;
+  height: 500px;
+  background-image: linear-gradient(rgba(238, 202, 202, 0.322), #131518);
+  top: 100px;
+  right: 0;
+  transition: all 1s ease;
 }
 .arrow-button {
   cursor: not-allowed;
@@ -209,7 +253,8 @@ body {
   stroke: currentcolor;
 }
 .main-content {
-  height: auto;
+  position: absolute;
+  top: 60px;
 }
 .section-category {
   margin-top: 20px;
@@ -614,4 +659,31 @@ div.card-body div.info span {
   padding: 0;
   border: 0;
   color: #b3b3b3;
+}
+.music-album-card > col {
+  width: 200px;
+}
+.col-8 {
+  width: 12.5%;
+}
+.spoti-search {
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  padding: 8px;
+  width: 360px;
+}
+.form-search {
+  position: relative;
+}
+.form-search input {
+  padding-left: 60px;
+}
+.form-search > svg {
+  position: absolute;
+  left: 5%;
+  top: 23%;
+}
+.searchTitle {
+  color: white;
 }
