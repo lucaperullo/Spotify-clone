@@ -903,7 +903,102 @@ th {
   margin-left: 25px;
 }
 /* MEDIA QUERIES */
+@media (max-width: 1883px) {
+  .carousel-img {
+    width: 416px;
+  }
+}
+@media (max-width: 1780px) {
+  .carousel-img {
+    width: 400px;
+  }
+}
+@media (max-width: 1729px) {
+  .carousel-img {
+    width: 360px;
+  }
+}
+@media (max-width: 1609px) {
+  .carousel-img {
+    width: 320px;
+  }
+}
+@media (max-width: 1589px) {
+  .carousel-img {
+    width: 490px;
+  }
+}
+@media (max-width: 1505px) {
+  .carousel-img {
+    width: 460px;
+  }
+}
+@media (max-width: 1436px) {
+  .carousel-img {
+    width: 420px;
+  }
+}
+@media (max-width: 1361px) {
+  .carousel-img {
+    width: 380px;
+  }
+}
+@media (max-width: 1274px) {
+  .carousel-img {
+    width: 330px;
+  }
+}
+@media (max-width: 1182px) {
+  .carousel-img {
+    width: 300px;
+  }
+}
+@media (max-width: 1110px) {
+  .carousel-img {
+    width: 250px;
+  }
+}
+@media (max-width: 1000px) {
+  .carousel-img {
+    width: 490px;
+  }
+}
+@media (max-width: 876px) {
+  .carousel-img {
+    width: 400px;
+  }
+}
+@media (max-width: 786px) {
+  .carousel-img {
+    width: 300px;
+  }
+}
+@media (max-width: 681px) {
+  .music-options {
+    display: none;
+  }
+  .music-bar-spotify {
+    height: 40px;
+  }
+  .carousel-img {
+    width: 200px;
+  }
+}
 
+@media (max-width: 391px) {
+  .music-options {
+    display: none;
+  }
+  .music-bar-spotify {
+    height: 40px;
+  }
+  .text-section-cont {
+    display: none;
+  }
+  #splide {
+    display: none;
+  }
+}
 @media (max-width: 1591px) {
   .card-image {
     width: 12vw;
