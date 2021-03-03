@@ -19,23 +19,30 @@ const displayResults = (data) => {
 
   div.innerHTML = "";
   data.forEach((element) => {
-    let text = document.createElement("div");
-    let texty = document.createElement("span");
-    let card = document.createElement("div");
+    let cardDiv = document.createElement("div");
+    let bg = document.createElement("div");
+    let divCover = document.createElement("div");
+    let coverImg = document.createElement("div");
     let img = document.createElement("img");
-    img.classList.add("card-image");
-    card.classList.add("col-8");
-    card.classList.add("card-body");
-    texty.innerText = `${element.album.title}`;
-    text.classList.add("info");
+    let cardbody = document.createElement("div");
+    let title = document.createElement("a");
+    let textDiv = document.createElement("div");
+    cardbody.classList.add("card-body");
+    title.classList.add("title");
+    textDiv.classList.add("titleScroll");
+    cardDiv.classList.add("music-album-card");
+    cardDiv.classList.add("bg");
+    cardDiv.classList.add("col-8");
+    bg.classList.add("bgSpotify");
+    divCover.classList.add("divCover");
+    textDiv.innerText = `${element.album.title}`;
     img.setAttribute("src", element.album.cover);
-    img.classList.add("search-result");
-
-    card.appendChild(img);
-
-    text.appendChild(texty);
-    card.appendChild(text);
-    div.appendChild(card);
+    cardDiv.appendChild(bg);
+    bg.appendChild(divCover);
+    divCover.appendChild(coverImg);
+    coverImg.appendChild(img);
+    bg.appendChild(cardbody);
+    title.appendChild(textDiv);
   });
 };
 const submitSearch = () => {
