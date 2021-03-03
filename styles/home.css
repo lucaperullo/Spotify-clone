@@ -101,7 +101,8 @@
   margin-bottom: 10px;
 }
 /* end of section navbar */
-.col {
+
+.bgSpotify {
   margin-right: 24px;
   padding: 16px;
   background: #181818;
@@ -109,12 +110,7 @@
   width: 100%;
   transition: background-color 0.3s ease;
 }
-.albumCard {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
+
 .divCover {
   position: relative;
   margin-bottom: 16px;
@@ -222,11 +218,4 @@ div.card-body div.info span {
   border: 0;
   color: #b3b3b3;
 }
-.row.row-cols-2.row-cols-md-4.row-cols-lg-6 {
-  padding: 0 24px;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  margin-right: 0;
-  margin-left: 0;
-}
+
