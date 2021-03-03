@@ -759,6 +759,25 @@ th {
 .play-button-liked:hover {
   transform: scale(1.1);
 }
+.carousel-img {
+  border-radius: 7px;
+  cursor: pointer;
+}
+.text-section-cont {
+  padding: 30px;
+}
+.img-browse {
+  border-radius: 8px;
+  height: 200px;
+  width: 200px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+.img-browse:hover {
+  transform: scale(1.1);
+}
 #magic-container {
   background-color: rgba(0, 0, 0, 0.103);
   padding: 30px;
@@ -797,6 +816,15 @@ th {
   color: white;
   margin-left: 20px;
   list-style: none;
+}
+.music-bar-spotify {
+  border-top: 1px solid black;
+  position: absolute;
+  bottom: 0;
+  background-color: #181818;
+  width: 100%;
+  z-index: 10;
+  height: 90px;
 }
 .responsive-navbar {
   display: none;

@@ -4,7 +4,7 @@ async function getAlbums() {
     "https://deezerdevs-deezer.p.rapidapi.com/search?q=" + search, //query
     {
       headers: {
-        "x-rapidapi-key": "99c24a2298msh5eccc99e454a6b5p187b5ejsn3147aee2593b",
+        "x-rapidapi-key": "747030d749msh471c14b186c043cp1cfee9jsn05041c6abfa1",
         "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
       },
     }
@@ -55,21 +55,19 @@ const submitSearch = () => {
     }
   });
 };
-async function toggleArtist23(id) {
+const albums = [14532191, 14984547, 6966955, 61419582];
+async function showAlbums() {
   const response = await fetch(
-    "https://deezerdevs-deezer.p.rapidapi.com/album/" + id, //query
+    "https://deezerdevs-deezer.p.rapidapi.com/album/" +
+      albums[Math.floor(Math.random() * 1)], //query
     {
       headers: {
-        "x-rapidapi-key": "5a5e031fd8msh210af9e647b3834p1c116ejsn3b5700d24f69",
+        "x-rapidapi-key": "747030d749msh471c14b186c043cp1cfee9jsn05041c6abfa1",
         "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
       },
     }
   );
   const data = await response.json();
   console.log(data);
-  displayAlbums1(data);
-  displayAlbums2(data);
-  displayAlbums3(data);
-  displayAlbums4(data);
   return data;
 }

@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Bootstrap CSS -->
-
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css"
+    />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -237,96 +240,256 @@
           </div>
           <div id="main-content">
             <div class="container">
-              <div class="container">
-                <div id="searchResults" class="row"></div>
-              </div>
+              <div id="searchResults" class="row"></div>
+            </div>
+            <div class="text-section-cont">
               <h4 class="font-bold searchTitle">Your top genres</h4>
-              <h4 class="font-bold searchTitle">Browse all</h4>
-              <div>
-                <ul class="responsive-navbar">
-                  <li class="nav">
-                    <a href="./home.html">
-                      <div class="iconHome">
-                        <svg
-                          viewBox="0 0 512 512"
-                          width="24"
-                          height="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M448 463.746h-149.333v-149.333h-85.334v149.333h-149.333v-315.428l192-111.746 192 110.984v316.19z"
-                            fill="currentColor"
-                          ></path>
-                        </svg>
-                      </div>
-                      <span>Home</span>
-                    </a>
+            </div>
+            <div id="splide" class="splide">
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li class="splide__slide">
+                    <img
+                      class="carousel-img"
+                      src="https://cdn.discordapp.com/attachments/816755257936969748/816755272352661584/unknown.png"
+                      alt=""
+                    />
                   </li>
-                  <li class="nav">
-                    <a href="./search.html">
-                      <div class="iconSearch">
-                        <svg
-                          viewBox="0 0 512 512"
-                          width="24"
-                          height="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M349.714 347.937l93.714 109.969-16.254 13.969-93.969-109.969q-48.508 36.825-109.207 36.825-36.826 0-70.476-14.349t-57.905-38.603-38.603-57.905-14.349-70.476 14.349-70.476 38.603-57.905 57.905-38.603 70.476-14.349 70.476 14.349 57.905 38.603 38.603 57.905 14.349 70.476q0 37.841-14.73 71.619t-40.889 58.921zM224 377.397q43.428 0 80.254-21.461t58.286-58.286 21.461-80.254-21.461-80.254-58.286-58.285-80.254-21.46-80.254 21.46-58.285 58.285-21.46 80.254 21.46 80.254 58.285 58.286 80.254 21.461z"
-                            fill="currentColor"
-                            fill-rule="evenodd"
-                          ></path>
-                        </svg>
-                      </div>
-                      Search</a
-                    >
+                  <li class="splide__slide">
+                    <img
+                      class="carousel-img"
+                      src="https://cdn.discordapp.com/attachments/816755257936969748/816757843330859048/unknown.png"
+                      alt=""
+                    />
                   </li>
-                  <li class="nav">
-                    <a href="./library.html">
-                      <div class="iconLib">
-                        <svg
-                          viewBox="0 0 512 512"
-                          width="24"
-                          height="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M291.301 81.778l166.349 373.587-19.301 8.635-166.349-373.587zM64 463.746v-384h21.334v384h-21.334zM192 463.746v-384h21.334v384h-21.334z"
-                            fill="currentColor"
-                          ></path>
-                        </svg>
-                      </div>
-                      Your Library</a
-                    >
+                  <li class="splide__slide">
+                    <img
+                      class="carousel-img"
+                      src="https://cdn.discordapp.com/attachments/816755257936969748/816757927326515200/unknown.png"
+                      alt=""
+                    />
                   </li>
-                  <li class="nav">
-                    <a
-                      href="https://play.google.com/store/apps/details?id=com.spotify.music&hl=en"
-                      target="_blank"
-                    >
-                      <div class="iconDownload">
-                        <img
-                          class="download-logo"
-                          src="https://img.icons8.com/plasticine/2x/spotify.png"
-                          alt=""
-                        />
-                      </div>
-                      Download
-                    </a>
+                  <li class="splide__slide">
+                    <img
+                      class="carousel-img"
+                      src="https://cdn.discordapp.com/attachments/816755257936969748/816758007341252628/unknown.png"
+                      alt=""
+                    />
                   </li>
                 </ul>
               </div>
+            </div>
+            <div class="text-section-cont">
+              <h4 class="font-bold searchTitle">Browse all</h4>
+            </div>
+            <div class="container browse-all">
+              <img
+                class="col-8 img-browse"
+                src="https://cdn.discordapp.com/attachments/816755257936969748/816762150991298640/unknown.png"
+                alt=""
+              />
+              <img
+                class="col-8 img-browse"
+                src="https://cdn.discordapp.com/attachments/816755257936969748/816762136507580416/unknown.png"
+                alt=""
+              />
+              <img
+                class="col-8 img-browse"
+                src="https://cdn.discordapp.com/attachments/816755257936969748/816762121810346035/unknown.png"
+                alt=""
+              />
+              <img
+                class="col-8 img-browse"
+                src="https://cdn.discordapp.com/attachments/816755257936969748/816762104547508295/unknown.png"
+                alt=""
+              />
+              <img
+                class="col-8 img-browse"
+                src="https://cdn.discordapp.com/attachments/816755257936969748/816764924093005855/unknown.png"
+                alt=""
+              />
+              <img
+                class="col-8 img-browse"
+                src="https://cdn.discordapp.com/attachments/816755257936969748/816764954707099729/unknown.png"
+                alt=""
+              />
+              <img
+                class="col-8 img-browse"
+                src="https://cdn.discordapp.com/attachments/816755257936969748/816764975178973265/unknown.png"
+                alt=""
+              />
+              <img
+                class="col-8 img-browse"
+                src="https://cdn.discordapp.com/attachments/816755257936969748/816764990534320158/unknown.png"
+                alt=""
+              />
+              <img
+                class="col-8 img-browse"
+                src="https://cdn.discordapp.com/attachments/816755257936969748/816765007433433128/unknown.png"
+                alt=""
+              />
+              <img
+                class="col-8 img-browse"
+                src="https://cdn.discordapp.com/attachments/816755257936969748/816765030166429726/unknown.png"
+                alt=""
+              />
+              <img
+                class="col-8 img-browse"
+                src="https://cdn.discordapp.com/attachments/816755257936969748/816765050567393280/unknown.png"
+                alt=""
+              />
+              <img
+                class="col-8 img-browse"
+                src="https://cdn.discordapp.com/attachments/816755257936969748/816765075326763079/unknown.png"
+                alt=""
+              />
+              <img
+                class="col-8 img-browse"
+                src="https://cdn.discordapp.com/attachments/816755257936969748/816765095307640872/unknown.png"
+                alt=""
+              />
+              <img
+                class="col-8 img-browse"
+                src="https://cdn.discordapp.com/attachments/816755257936969748/816765121271300116/unknown.png"
+                alt=""
+              />
+              <img
+                class="col-8 img-browse"
+                src="https://cdn.discordapp.com/attachments/816755257936969748/816765150006738974/unknown.png"
+                alt=""
+              />
+              <img
+                class="col-8 img-browse"
+                src="https://cdn.discordapp.com/attachments/816755257936969748/816765176400969778/unknown.png"
+                alt=""
+              />
+              <img
+                class="col-8 img-browse"
+                src="https://cdn.discordapp.com/attachments/816755257936969748/816765198747959367/unknown.png"
+                alt=""
+              />
+              <img
+                class="col-8 img-browse"
+                src="https://cdn.discordapp.com/attachments/816755257936969748/816765250212593714/unknown.png"
+                alt=""
+              />
+              <img
+                class="col-8 img-browse"
+                src="https://cdn.discordapp.com/attachments/816755257936969748/816765280440287282/unknown.png"
+                alt=""
+              />
+              <img
+                class="col-8 img-browse"
+                src="https://cdn.discordapp.com/attachments/816755257936969748/816767534509326406/unknown.png"
+                alt=""
+              />
+              <img
+                class="col-8 img-browse"
+                src="https://cdn.discordapp.com/attachments/816755257936969748/816767858096341052/unknown.png"
+                alt=""
+              />
+              <img
+                class="col-8 img-browse"
+                src="https://cdn.discordapp.com/attachments/816755257936969748/816768646931677224/unknown.png"
+                alt=""
+              />
+              <img
+                class="col-8 img-browse"
+                src="https://cdn.discordapp.com/attachments/816755257936969748/816768623472934952/unknown.png"
+                alt=""
+              />
+              <img
+                class="col-8 img-browse"
+                src="https://cdn.discordapp.com/attachments/816755257936969748/816768610503622686/unknown.png"
+                alt=""
+              />
+            </div>
+            <div>
+              <ul class="responsive-navbar">
+                <li class="nav">
+                  <a href="./home.html">
+                    <div class="iconHome">
+                      <svg
+                        viewBox="0 0 512 512"
+                        width="24"
+                        height="24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M448 463.746h-149.333v-149.333h-85.334v149.333h-149.333v-315.428l192-111.746 192 110.984v316.19z"
+                          fill="currentColor"
+                        ></path>
+                      </svg>
+                    </div>
+                    <span>Home</span>
+                  </a>
+                </li>
+                <li class="nav">
+                  <a href="./search.html">
+                    <div class="iconSearch">
+                      <svg
+                        viewBox="0 0 512 512"
+                        width="24"
+                        height="24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M349.714 347.937l93.714 109.969-16.254 13.969-93.969-109.969q-48.508 36.825-109.207 36.825-36.826 0-70.476-14.349t-57.905-38.603-38.603-57.905-14.349-70.476 14.349-70.476 38.603-57.905 57.905-38.603 70.476-14.349 70.476 14.349 57.905 38.603 38.603 57.905 14.349 70.476q0 37.841-14.73 71.619t-40.889 58.921zM224 377.397q43.428 0 80.254-21.461t58.286-58.286 21.461-80.254-21.461-80.254-58.286-58.285-80.254-21.46-80.254 21.46-58.285 58.285-21.46 80.254 21.46 80.254 58.285 58.286 80.254 21.461z"
+                          fill="currentColor"
+                          fill-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </div>
+                    Search</a
+                  >
+                </li>
+                <li class="nav">
+                  <a href="./library.html">
+                    <div class="iconLib">
+                      <svg
+                        viewBox="0 0 512 512"
+                        width="24"
+                        height="24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M291.301 81.778l166.349 373.587-19.301 8.635-166.349-373.587zM64 463.746v-384h21.334v384h-21.334zM192 463.746v-384h21.334v384h-21.334z"
+                          fill="currentColor"
+                        ></path>
+                      </svg>
+                    </div>
+                    Your Library</a
+                  >
+                </li>
+                <li class="nav">
+                  <a
+                    href="https://play.google.com/store/apps/details?id=com.spotify.music&hl=en"
+                    target="_blank"
+                  >
+                    <div class="iconDownload">
+                      <img
+                        class="download-logo"
+                        src="https://img.icons8.com/plasticine/2x/spotify.png"
+                        alt=""
+                      />
+                    </div>
+                    Download
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
     </div>
-
+    <div class="music-bar-spotify"></div>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
       crossorigin="anonymous"
     ></script>
+    <script src="../splide.js"></script>
     <script src="../resizebar.js"></script>
     <script src="../home.js"></script>
     <script src="../fetch.js"></script>
