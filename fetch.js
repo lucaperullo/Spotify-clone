@@ -55,3 +55,21 @@ const submitSearch = () => {
     }
   });
 };
+async function toggleArtist23(id) {
+  const response = await fetch(
+    "https://deezerdevs-deezer.p.rapidapi.com/album/" + id, //query
+    {
+      headers: {
+        "x-rapidapi-key": "5a5e031fd8msh210af9e647b3834p1c116ejsn3b5700d24f69",
+        "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
+      },
+    }
+  );
+  const data = await response.json();
+  console.log(data);
+  displayAlbums1(data);
+  displayAlbums2(data);
+  displayAlbums3(data);
+  displayAlbums4(data);
+  return data;
+}
