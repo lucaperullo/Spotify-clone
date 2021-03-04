@@ -25,7 +25,42 @@
       rel="icon"
       href="https://cdn.iconscout.com/icon/free/png-512/spotify-11-432546.png"
     />
-
+    <style>
+      .col-8 {
+        width: 15%;
+      }
+      .card-image {
+        width: 100%;
+      }
+      .seeMoreStyle {
+        color: white;
+        font-size: 12px;
+      }
+      .seeMoreStyle:hover {
+        text-decoration: underline !important;
+      }
+      .card-container-spotify {
+        border-radius: none !important;
+        width: 236px;
+        padding: 17px;
+        background-color: #181818;
+        margin-bottom: 10px;
+        margin-right: 10px;
+      }
+      .card-container-spotify:hover {
+        background-color: #181818;
+      }
+      @media (max-width: 1347px) {
+        .card-container-spotify {
+          width: auto;
+        }
+      }
+      @media (min-width: 1348px) {
+        .card-container-spotify {
+          width: 11vw;
+        }
+      }
+    </style>
     <title>Spotify – Web Player</title>
   </head>
   <body>
@@ -116,23 +151,25 @@
                 </button>
               </div>
               <div class="likedSongs">
-                <button type="button">
-                  <div class="heartDiv">
-                    <svg
-                      class="heart"
-                      role="img"
-                      height="16"
-                      width="16"
-                      viewBox="0 0 16 16"
-                    >
-                      <path fill="none" d="M0 0h16v16H0z"></path>
-                      <path
-                        d="M13.797 2.727a4.057 4.057 0 00-5.488-.253.558.558 0 01-.31.112.531.531 0 01-.311-.112 4.054 4.054 0 00-5.487.253c-.77.77-1.194 1.794-1.194 2.883s.424 2.113 1.168 2.855l4.462 5.223a1.791 1.791 0 002.726 0l4.435-5.195a4.052 4.052 0 001.195-2.883 4.057 4.057 0 00-1.196-2.883z"
-                      ></path>
-                    </svg>
-                  </div>
-                  <span style="text-shadow: 0px 0px 6px">Liked Songs</span>
-                </button>
+                <a href="./liked.html">
+                  <button type="button">
+                    <div class="heartDiv">
+                      <svg
+                        class="heart"
+                        role="img"
+                        height="16"
+                        width="16"
+                        viewBox="0 0 16 16"
+                      >
+                        <path fill="none" d="M0 0h16v16H0z"></path>
+                        <path
+                          d="M13.797 2.727a4.057 4.057 0 00-5.488-.253.558.558 0 01-.31.112.531.531 0 01-.311-.112 4.054 4.054 0 00-5.487.253c-.77.77-1.194 1.794-1.194 2.883s.424 2.113 1.168 2.855l4.462 5.223a1.791 1.791 0 002.726 0l4.435-5.195a4.052 4.052 0 001.195-2.883 4.057 4.057 0 00-1.196-2.883z"
+                        ></path>
+                      </svg>
+                    </div>
+                    <span style="text-shadow: 0px 0px 6px">Liked Songs</span>
+                  </button>
+                </a>
               </div>
               <hr class="spot" />
 
@@ -153,7 +190,7 @@
         <div onscroll="_navColorOnScroll_LIKED()" id="main">
           <div id="navbuttons-top">
             <div class="arrows">
-                <button onclick="history.go(-1)" class="arrow-button">
+              <button onclick="history.go(-1)" class="arrow-button">
                 <svg
                   role="img"
                   focusable="false"
@@ -189,9 +226,9 @@
               </button>
             </div>
             <div class="account-buttons">
-                <div class="logout-responsive" onclick="displayDropdown()">
-                    <i class="fas fa-caret-down"></i>
-                  </div>
+              <div class="logout-responsive" onclick="displayDropdown()">
+                <i class="fas fa-caret-down"></i>
+              </div>
               <div class="upgrade-pro">
                 <a class="font-bold">upgrade</a>
               </div>
@@ -221,87 +258,23 @@
           <div id="main-content">
             <header class="sticky-bg">
               <div class="header-content">
-                <img
-                  src="https://t.scdn.co/images/3099b3803ad9496896c43f22fe9be8c4.png"
-                  alt=""
-                />
-                <br />
-
                 <div class="text-wrapper-header">
-                  <h2 class="small">PLAYLIST</h2>
-
-                  <h1 style="font-size: 70px" class="font-bold">Liked Songs</h1>
-                  <div class="row">
-                    <div class="col-sm-1">
-                      <img
-                        style="height: 30px; width: 30px; border-radius: 50%"
-                        src="https://cdn.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png"
-                        alt=""
-                      />
-                    </div>
-                    <div class="col-sm-6"><p>Luca Perullo</p></div>
-                  </div>
+                  <h1 id="title" style="font-size: 70px" class="font-bold">
+                    Liked Songs
+                  </h1>
                 </div>
               </div>
             </header>
             <div id="magic-container" class="container-fluid">
-              <button
-                class="play-button-liked"
-                aria-label="Play"
-                data-testid="play-button"
-                title="Play"
-                style="--size: 56px"
-              >
-                <svg
-                  height="28"
-                  role="img"
-                  width="28"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
+              <div class="title-seeMore">
+                <h4 class="font-regular" style="color: white">podcasts</h4>
+                <a class="seeMoreStyle" href=""
+                  ><span style="color: white; font-size: 14px"
+                    >SEE MORE</span
+                  ></a
                 >
-                  <polygon
-                    points="21.57 12 5.98 3 5.98 21 21.57 12"
-                    fill="currentColor"
-                  ></polygon>
-                </svg>
-              </button>
-              <table class="table ">
-                <thead>
-                  <tr style="background-color: transparent!important">
-                      
-                    <th scope="col"># TITLE</th>
-                    <th scope="col">ALBUM</th>
-                    <th scope="col">DATE ADDED</th>
-                    <th scope="col"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M7.999 3H6.999V7V8H7.999H9.999V7H7.999V3ZM7.5 0C3.358 0 0 3.358 0 7.5C0 11.642 3.358 15 7.5 15C11.642 15 15 11.642 15 7.5C15 3.358 11.642 0 7.5 0ZM7.5 14C3.916 14 1 11.084 1 7.5C1 3.916 3.916 1 7.5 1C11.084 1 14 3.916 14 7.5C14 11.084 11.084 14 7.5 14Z" fill="currentColor"></path></svg></th>
-                 
-                </tr>
-                  
-                </thead>
-                <tbody>
-                  <tr style="background-color: transparent!important;">
-                   
-                    <td colspan="5" class="table"><hr style="background-color:rgba(255, 255, 255, 0.377)"></td>
-                    
-                    
-                  </tr>
-                  <tr>
-                    <th scope="row">2 <div class="row orplay"></div></th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                  </tr>
-                </tbody>
-                
-              </table>
-              
-            </div>
-           
-
+              </div>
+              <div id="searchResults" class="row"></div>
             </div>
           </div>
         </div>
@@ -313,6 +286,7 @@
       integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
       crossorigin="anonymous"
     ></script>
+    <script src="../showPodcasts.js"></script>
     <script src="../dropdown.js"></script>
     <script src="../resizebar.js"></script>
     <script src="../navbar.js"></script>

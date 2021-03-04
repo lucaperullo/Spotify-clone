@@ -1219,3 +1219,7 @@ th {
     width: 102%;
   }
 }
+.title-seeMore {
+  display: flex;
+  justify-content: space-between;
+}
