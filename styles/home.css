@@ -197,7 +197,6 @@ body {
   border-radius: 4px;
   padding: 10px;
   width: 160px;
-  display: none;
 
   align-items: center;
   justify-content: center;
@@ -275,14 +274,20 @@ body {
   width: 100%;
 }
 .music-pic-small {
+  height: 80px;
+  width: 80px;
   border-radius: 3px 0px 0px 3px;
   box-shadow: 3px 0px 3px 0px rgba(32, 32, 32, 0.705);
 }
 .music-title {
+  width: 60px;
   margin-left: 10px;
   font-size: 12px;
 }
 .music-text {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
   transition: 0.25s ease-in;
   text-align: start;
   border-radius: 0px 3px 3px 0px;
@@ -291,7 +296,7 @@ body {
   justify-content: space-between;
   padding-top: 1vw;
   padding-bottom: auto;
-  width: 250px;
+  width: 25vw;
   color: white;
 }
 .music-text:hover {
@@ -304,7 +309,7 @@ body {
   margin-top: 5px;
   opacity: 0;
   color: green;
-  height: 40px;
+  height: 35px;
   display: none;
 }
 .music-text:hover > .play-icon {
@@ -771,8 +776,14 @@ th {
   transform: scale(1.1);
 }
 .carousel-img {
+  opacity: 0.89;
   border-radius: 7px;
   cursor: pointer;
+  transition: 0.25s ease;
+}
+.carousel-img:hover {
+  opacity: 1;
+  transform: scale(1.05);
 }
 .text-section-cont {
   padding: 30px;

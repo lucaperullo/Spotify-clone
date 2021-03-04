@@ -3,25 +3,32 @@ const users = [
     username: "Luca",
     password: "1234",
   },
+  {
+    username: "Jamie",
+    password: "1234",
+  },
+  {
+    username: "Admin",
+    password: "admin",
+  },
 ];
+let checked = false;
 let userMatch = 0;
 
+let checkbox = document.getElementById("fruit1");
 let button = document.querySelector("#button-login");
-let username = document.querySelector(".email").value;
-let password = document.querySelector(".password").value;
+let username = document.querySelector(".email");
+let password = document.querySelector(".password");
 
 const login = () => {
-  event.preventDefault();
-  for (let i = 0; i < users.length; i++) {
-    if (username === users[i].email && password === users[i].password) {
-      userMatch++;
-    }
-  }
-  if (userMatch++ > 0) {
-    window.location.assign("home.html");
+  const indexOfUser = users.findIndex(
+    (user) => user.username === username.value
+  );
+  if (indexOfUser !== -1) {
+    users[indexOfUser].password === password.value
+      ? window.location.assign("/pages/home.html")
+      : alert("User not found");
   } else {
-    window.location.assign("index.html");
-    alert("User does not exist");
+    alert("User not found");
   }
 };
-button.addEventListener("click", login);

@@ -21,12 +21,9 @@ const _navColorOnScroll_LIKED = () => {
 };
 
 const displayDropdown = () => {
+  console.log("hi");
   let dropdown = document.querySelector(".dropdown-log");
-  if (dropdown.style.display !== "block") {
-    dropdown.style.display = "block";
-  } else if (dropdown.style.display !== "none") {
-    dropdown.style.display = "none";
-  }
+  dropdown.classList.toggle("d-none");
 };
 const removeGradient = () => {
   let navbar = document.querySelector(".navbar");
