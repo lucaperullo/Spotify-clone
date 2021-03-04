@@ -989,57 +989,6 @@ th {
 }
 
 @media (max-width: 391px) {
-  .dropdown-log {
-    border-radius: 4px;
-    padding: 10px;
-    width: 70%;
-    backdrop-filter: blur(5px);
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    color: white;
-    z-index: 1;
-    background-color: #0c0c0cf3;
-    position: absolute;
-    top: 120px;
-    right: 50px;
-  }
-  .logout-responsive:active {
-    transform: rotate(70deg);
-  }
-  .logout-responsive {
-    transition: 0.25s ease;
-    background-color: rgba(0, 0, 0, 0.363);
-    border-radius: 50%;
-    display: block;
-    color: white;
-    position: fixed;
-    top: 100px;
-    right: 30px;
-    z-index: 10;
-    height: 30px;
-    width: 30px;
-  }
-  .logout-responsive > i {
-    font-size: 20px;
-    padding-left: 8px;
-    padding-top: 5px;
-  }
-  .spoti-search {
-    width: 180px !important;
-  }
-  .account-owner {
-    display: none;
-  }
-  .music-options {
-    display: none;
-  }
-  .music-bar-spotify {
-    height: 40px;
-  }
-  .text-section-cont {
-    display: none;
-  }
   #splide {
     display: none;
   }
@@ -1113,6 +1062,15 @@ th {
 }
 
 @media (max-width: 680px) {
+  .browse-all {
+    margin-top: 20px;
+  }
+  .splide__arrow {
+    display: none;
+  }
+  .splide__pagination__page {
+    display: none;
+  }
   .music-bar-spotify {
     bottom: 50px !important;
   }
@@ -1162,6 +1120,61 @@ th {
 @media (max-width: 485px) {
   .carousel-img {
     width: 250px;
+  }
+}
+@media (max-width: 450px) {
+  .dropdown-log {
+    border-radius: 4px;
+    padding: 10px;
+    width: 70%;
+    backdrop-filter: blur(5px);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    z-index: 9;
+    background-color: #0c0c0ccc;
+    position: absolute;
+    top: 120px;
+    right: 50px;
+  }
+  .logout-responsive:active {
+    transform: rotate(70deg);
+    background-color: black;
+  }
+  .logout-responsive {
+    backdrop-filter: blur(5px);
+    transition: 0.25s ease;
+    background-color: rgba(0, 0, 0, 0.671);
+    border-radius: 50%;
+    display: block;
+    color: white;
+    position: fixed;
+    top: 100px;
+    right: 30px;
+    z-index: 10;
+    height: 40px;
+    width: 40px;
+  }
+  .logout-responsive > i {
+    font-size: 20px;
+    padding-left: 14px;
+    padding-top: 10px;
+  }
+  .spoti-search {
+    width: 180px !important;
+  }
+  .account-owner {
+    display: none;
+  }
+  .music-options {
+    display: none;
+  }
+  .music-bar-spotify {
+    height: 40px;
+  }
+  .text-section-cont {
+    display: none;
   }
 }
 @media (max-width: 433px) {
