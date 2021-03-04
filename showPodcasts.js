@@ -2,7 +2,7 @@ async function getPodcasts() {
   let headerContent = document.querySelector(".header-content");
 
   let title = document.querySelector("#title");
-  let search = "podcasts";
+  let search = "Made" + " " + "for" + " " + "You";
   title.innerText = search;
   const response = await fetch(
     "https://spotify-fetch.herokuapp.com/https://api.deezer.com/search?q=" +

@@ -39,23 +39,8 @@ const displayResults = (data) => {
     div.appendChild(containerCardContainer);
   });
 };
-const submitSearch = () => {
-  const input = document.querySelector(".spoti-search");
-  console.log(input);
-  input.addEventListener("keydown", function (event) {
-    if (event.keyCode === 13) {
-      console.log("hi");
 
-      getAlbums();
-    }
-  });
-};
 const cards = document.querySelectorAll(".col-image");
-const whatDoIClick = () => {
-  for (let i = 0; i < cards.length; i++) {
-    cards[i].addEventListener(`click`, `generateContent_${i}`);
-  }
-};
 
 const generateContent_0 = () => {
   window.location.assign(`/pages/hardcoded-0.html`);
