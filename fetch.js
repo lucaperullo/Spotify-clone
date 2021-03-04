@@ -72,7 +72,7 @@ const showData = () => {
 };
 async function showAlbums(id) {
   const response = await fetch(
-    "https://deezerdevs-deezer.p.rapidapi.com/album/" + id, //query
+    "https://api.deezer.com/album/" + id, //query
     {
       headers: {
         "x-rapidapi-key": "747030d749msh471c14b186c043cp1cfee9jsn05041c6abfa1",
