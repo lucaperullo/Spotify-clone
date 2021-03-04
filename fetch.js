@@ -64,20 +64,6 @@ const submitSearch = () => {
 ///////////////////// ALBUM CATEGORIES ////////////////////////
 ///////////////////////////////////////////////////////////////
 
-const trendingNowAlbums = [
-  "180681412",
-  "180996332",
-  "178086012",
-  "180983992",
-  "181270962",
-  "179934622",
-  "180450492",
-  "178406382",
-  "179902942",
-  "179906172",
-  "179682412",
-];
-
 const popularPlaylists = [
   "7237234924",
   "1060971691",
@@ -251,31 +237,3 @@ let playlistURL =
   "https://spotify-fetch.herokuapp.com/https://api.deezer.com/playlist/";
 //+ id(int), title(string), description(string), duration(int),is_loved_track(boolean),
 //nb_tracks(int), fans(The number of playlist's fans(int))
-
-const showData = () => {
-  trendingNowAlbums.forEach(async (id) => {
-    await showAlbums(id);
-    async function showAlbums(id) {
-      const response = await fetch(albumURL + id);
-      const data = await response.json();
-      console.log(data);
-
-      let firstRow = document.getElementById("good-time-row");
-      firstRow.innerHTML += `<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card-box">
-          <div class="music-card">
-            <img class="music-pic-small" onmouseover="changeBackgroundColor()" onmouseout="removeGradient()" src="${data.cover}" height="80" width="80" alt="">
-            <div class="music-text">
-              <p class="music-title font-chubby">${data.title}</p>
-              <img class="play-icon" src="/imgs/play.svg" alt="">
-            </div>
-          </div>
-        </div>
-      </div>`;
-
-      return data;
-    }
-  });
-};
-
-window.onload = showData();
