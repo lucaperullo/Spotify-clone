@@ -1135,8 +1135,8 @@ th {
     z-index: 9;
     background-color: #0c0c0ccc;
     position: absolute;
-    top: 120px;
-    right: 50px;
+    top: 130px;
+    right: 60px;
   }
   .logout-responsive:active {
     transform: rotate(70deg);
