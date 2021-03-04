@@ -1,25 +1,3 @@
-const navbar = document.getElementById("navbuttons-top");
-const main = document.querySelector("#main");
-
-const _navColorOnScrollHOME = () => {
-  const { scrollTop, scrollHeight, clientHeight } = main;
-  const ratio = scrollTop / (scrollHeight - clientHeight);
-
-  navbar.style.backgroundColor = `rgba(7, 7, 7, ${ratio * 10})`;
-};
-const _navColorOnScroll = () => {
-  const { scrollTop, scrollHeight, clientHeight } = main;
-  const ratio = scrollTop / (scrollHeight - clientHeight);
-
-  navbar.style.backgroundColor = `rgba(7, 7, 7, ${ratio * 10})`;
-};
-const _navColorOnScroll_LIKED = () => {
-  const { scrollTop, scrollHeight, clientHeight } = main;
-  const ratio = scrollTop / (scrollHeight - clientHeight);
-
-  navbar.style.backgroundColor = `rgba(32, 22, 64, ${ratio * 10})`;
-};
-
 const displayDropdown = () => {
   console.log("hi");
   let dropdown = document.querySelector(".dropdown-log");
@@ -52,3 +30,46 @@ const changeBackgroundColor = () => {
     navbar.style.opacity = "1";
   }, 500);
 };
+
+const trendingNowAlbums = [
+  "180681412",
+  "180996332",
+  "178086012",
+  "180983992",
+  "181270962",
+  "179934622",
+  "180450492",
+  "178406382",
+  "179902942",
+  "179906172",
+  "179682412",
+];
+let albumURL =
+  "https://spotify-fetch.herokuapp.com/https://api.deezer.com/album/"; //*album id
+const showData = () => {
+  trendingNowAlbums.forEach(async (id) => {
+    await showAlbums(id);
+    async function showAlbums(id) {
+      const response = await fetch(albumURL + id);
+      const data = await response.json();
+      console.log(data);
+
+      let firstRow = document.getElementById("good-time-row");
+      firstRow.innerHTML += `<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card-box">
+          <div class="music-card">
+            <img class="music-pic-small" onmouseover="changeBackgroundColor()" onmouseout="removeGradient()" src="${data.cover}" height="80" width="80" alt="">
+            <div class="music-text">
+              <p class="music-title font-chubby">${data.title}</p>
+              <img class="play-icon" src="/imgs/play.svg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>`;
+
+      return data;
+    }
+  });
+};
+
+window.onload = showData();
