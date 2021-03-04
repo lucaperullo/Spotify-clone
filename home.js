@@ -1,8 +1,3 @@
-const displayDropdown = () => {
-  console.log("hi");
-  let dropdown = document.querySelector(".dropdown-log");
-  dropdown.classList.toggle("d-none");
-};
 const removeGradient = () => {
   let navbar = document.querySelector(".navbar");
   navbar.style.backgroundImage =
