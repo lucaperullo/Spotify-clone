@@ -193,7 +193,7 @@
               </button>
               <div class="form-search">
                 <input
-                  onkeydown="getAlbums()"
+                  onchange="getAlbums()"
                   class="spoti-search"
                   type="text"
                   placeholder="Artists, songs, or podcasts"
@@ -243,194 +243,202 @@
           </div>
           <div id="main-content">
             <div class="container">
-              <div id="searchResults" class="row"></div>
-            </div>
-            <div id="divToDelete">
-              <div class="text-section-cont">
-                <h4 class="font-bold searchTitle">Your top genres</h4>
-              </div>
-              <div id="splide" class="splide">
-                <div class="splide__track">
-                  <ul class="splide__list">
-                    <li class="splide__slide">
-                      <img
-                        class="carousel-img"
-                        src="https://cdn.discordapp.com/attachments/816755257936969748/816755272352661584/unknown.png"
-                        alt=""
-                      />
-                    </li>
-                    <li class="splide__slide">
-                      <img
-                        class="carousel-img"
-                        src="https://cdn.discordapp.com/attachments/816755257936969748/816757843330859048/unknown.png"
-                        alt=""
-                      />
-                    </li>
-                    <li class="splide__slide">
-                      <img
-                        class="carousel-img"
-                        src="https://cdn.discordapp.com/attachments/816755257936969748/816757927326515200/unknown.png"
-                        alt=""
-                      />
-                    </li>
-                    <li class="splide__slide">
-                      <img
-                        class="carousel-img"
-                        src="https://cdn.discordapp.com/attachments/816755257936969748/816758007341252628/unknown.png"
-                        alt=""
-                      />
-                    </li>
-                  </ul>
+              <div class="content-to-replace">
+                <div id="searchResults" class="row">
+                  <div id="artist-column-top" class="col-sm-12 col-md-5"></div>
+                  <div
+                    id="relative-songs-artist"
+                    class="col-sm-12 col-md-8"
+                  ></div>
                 </div>
-              </div>
-              <div class="text-section-cont">
-                <h4 class="font-bold searchTitle">Browse all</h4>
-              </div>
-              <div class="container browse-all">
-                <img
-                  class="col-image img-browse"
-                  onclick="generateContent_0()"
-                  src="https://cdn.discordapp.com/attachments/816755257936969748/816762150991298640/unknown.png"
-                  alt=""
-                />
-                <img
-                  class="col-image img-browse"
-                  onclick="generateContent_1()"
-                  src="https://cdn.discordapp.com/attachments/816755257936969748/816762136507580416/unknown.png"
-                  alt=""
-                />
-                <img
-                  class="col-image img-browse"
-                  onclick="generateContent_2()"
-                  src="https://cdn.discordapp.com/attachments/816755257936969748/816762121810346035/unknown.png"
-                  alt=""
-                />
-                <img
-                  class="col-image img-browse"
-                  onclick="generateContent_3()"
-                  src="https://cdn.discordapp.com/attachments/816755257936969748/816762104547508295/unknown.png"
-                  alt=""
-                />
-                <img
-                  class="col-image img-browse"
-                  onclick="generateContent_4()"
-                  src="https://cdn.discordapp.com/attachments/816755257936969748/816764924093005855/unknown.png"
-                  alt=""
-                />
-                <img
-                  class="col-image img-browse"
-                  onclick="generateContent_5()"
-                  src="https://cdn.discordapp.com/attachments/816755257936969748/816764954707099729/unknown.png"
-                  alt=""
-                />
-                <img
-                  class="col-image img-browse"
-                  onclick="generateContent_6()"
-                  src="https://cdn.discordapp.com/attachments/816755257936969748/816764975178973265/unknown.png"
-                  alt=""
-                />
-                <img
-                  class="col-image img-browse"
-                  onclick="generateContent_7()"
-                  src="https://cdn.discordapp.com/attachments/816755257936969748/816764990534320158/unknown.png"
-                  alt=""
-                />
-                <img
-                  class="col-image img-browse"
-                  onclick="generateContent_8()"
-                  src="https://cdn.discordapp.com/attachments/816755257936969748/816765007433433128/unknown.png"
-                  alt=""
-                />
-                <img
-                  class="col-image img-browse"
-                  onclick="generateContent_9()"
-                  src="https://cdn.discordapp.com/attachments/816755257936969748/816765030166429726/unknown.png"
-                  alt=""
-                />
-                <img
-                  class="col-image img-browse"
-                  onclick="generateContent_10()"
-                  src="https://cdn.discordapp.com/attachments/816755257936969748/816765050567393280/unknown.png"
-                  alt=""
-                />
-                <img
-                  class="col-image img-browse"
-                  onclick="generateContent_11()"
-                  src="https://cdn.discordapp.com/attachments/816755257936969748/816765075326763079/unknown.png"
-                  alt=""
-                />
-                <img
-                  class="col-image img-browse"
-                  onclick="generateContent_12()"
-                  src="https://cdn.discordapp.com/attachments/816755257936969748/816765095307640872/unknown.png"
-                  alt=""
-                />
-                <img
-                  class="col-image img-browse"
-                  onclick="generateContent_13()"
-                  src="https://cdn.discordapp.com/attachments/816755257936969748/816765121271300116/unknown.png"
-                  alt=""
-                />
-                <img
-                  class="col-image img-browse"
-                  onclick="generateContent_14()"
-                  src="https://cdn.discordapp.com/attachments/816755257936969748/816765150006738974/unknown.png"
-                  alt=""
-                />
-                <img
-                  class="col-image img-browse"
-                  onclick="generateContent_15()"
-                  src="https://cdn.discordapp.com/attachments/816755257936969748/816765176400969778/unknown.png"
-                  alt=""
-                />
-                <img
-                  class="col-image img-browse"
-                  onclick="generateContent_16()"
-                  src="https://cdn.discordapp.com/attachments/816755257936969748/816765198747959367/unknown.png"
-                  alt=""
-                />
-                <img
-                  class="col-image img-browse"
-                  onclick="generateContent_17()"
-                  src="https://cdn.discordapp.com/attachments/816755257936969748/816765250212593714/unknown.png"
-                  alt=""
-                />
-                <img
-                  class="col-image img-browse"
-                  onclick="generateContent_18()"
-                  src="https://cdn.discordapp.com/attachments/816755257936969748/816765280440287282/unknown.png"
-                  alt=""
-                />
-                <img
-                  class="col-image img-browse"
-                  onclick="generateContent_19()"
-                  src="https://cdn.discordapp.com/attachments/816755257936969748/816767534509326406/unknown.png"
-                  alt=""
-                />
-                <img
-                  class="col-image img-browse"
-                  onclick="generateContent_20()"
-                  src="https://cdn.discordapp.com/attachments/816755257936969748/816767858096341052/unknown.png"
-                  alt=""
-                />
-                <img
-                  class="col-image img-browse"
-                  onclick="generateContent_21()"
-                  src="https://cdn.discordapp.com/attachments/816755257936969748/816768646931677224/unknown.png"
-                  alt=""
-                />
-                <img
-                  class="col-image img-browse"
-                  onclick="generateContent_22()"
-                  src="https://cdn.discordapp.com/attachments/816755257936969748/816768623472934952/unknown.png"
-                  alt=""
-                />
-                <img
-                  class="col-image img-browse"
-                  onclick="generateContent_23()"
-                  src="https://cdn.discordapp.com/attachments/816755257936969748/816768610503622686/unknown.png"
-                  alt=""
-                />
+              
+              <div id="divToDelete">
+                <div class="text-section-cont">
+                  <h4 class="font-bold searchTitle">Your top genres</h4>
+                </div>
+                <div id="splide" class="splide">
+                  <div class="splide__track">
+                    <ul class="splide__list">
+                      <li class="splide__slide">
+                        <img
+                          class="carousel-img"
+                          src="https://cdn.discordapp.com/attachments/816755257936969748/816755272352661584/unknown.png"
+                          alt=""
+                        />
+                      </li>
+                      <li class="splide__slide">
+                        <img
+                          class="carousel-img"
+                          src="https://cdn.discordapp.com/attachments/816755257936969748/816757843330859048/unknown.png"
+                          alt=""
+                        />
+                      </li>
+                      <li class="splide__slide">
+                        <img
+                          class="carousel-img"
+                          src="https://cdn.discordapp.com/attachments/816755257936969748/816757927326515200/unknown.png"
+                          alt=""
+                        />
+                      </li>
+                      <li class="splide__slide">
+                        <img
+                          class="carousel-img"
+                          src="https://cdn.discordapp.com/attachments/816755257936969748/816758007341252628/unknown.png"
+                          alt=""
+                        />
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="text-section-cont">
+                  <h4 class="font-bold searchTitle">Browse all</h4>
+                </div>
+                <div class="container browse-all">
+                  <img
+                    class="col-image img-browse"
+                    onclick="generateContent_0()"
+                    src="https://cdn.discordapp.com/attachments/816755257936969748/816762150991298640/unknown.png"
+                    alt=""
+                  />
+                  <img
+                    class="col-image img-browse"
+                    onclick="generateContent_1()"
+                    src="https://cdn.discordapp.com/attachments/816755257936969748/816762136507580416/unknown.png"
+                    alt=""
+                  />
+                  <img
+                    class="col-image img-browse"
+                    onclick="generateContent_2()"
+                    src="https://cdn.discordapp.com/attachments/816755257936969748/816762121810346035/unknown.png"
+                    alt=""
+                  />
+                  <img
+                    class="col-image img-browse"
+                    onclick="generateContent_3()"
+                    src="https://cdn.discordapp.com/attachments/816755257936969748/816762104547508295/unknown.png"
+                    alt=""
+                  />
+                  <img
+                    class="col-image img-browse"
+                    onclick="generateContent_4()"
+                    src="https://cdn.discordapp.com/attachments/816755257936969748/816764924093005855/unknown.png"
+                    alt=""
+                  />
+                  <img
+                    class="col-image img-browse"
+                    onclick="generateContent_5()"
+                    src="https://cdn.discordapp.com/attachments/816755257936969748/816764954707099729/unknown.png"
+                    alt=""
+                  />
+                  <img
+                    class="col-image img-browse"
+                    onclick="generateContent_6()"
+                    src="https://cdn.discordapp.com/attachments/816755257936969748/816764975178973265/unknown.png"
+                    alt=""
+                  />
+                  <img
+                    class="col-image img-browse"
+                    onclick="generateContent_7()"
+                    src="https://cdn.discordapp.com/attachments/816755257936969748/816764990534320158/unknown.png"
+                    alt=""
+                  />
+                  <img
+                    class="col-image img-browse"
+                    onclick="generateContent_8()"
+                    src="https://cdn.discordapp.com/attachments/816755257936969748/816765007433433128/unknown.png"
+                    alt=""
+                  />
+                  <img
+                    class="col-image img-browse"
+                    onclick="generateContent_9()"
+                    src="https://cdn.discordapp.com/attachments/816755257936969748/816765030166429726/unknown.png"
+                    alt=""
+                  />
+                  <img
+                    class="col-image img-browse"
+                    onclick="generateContent_10()"
+                    src="https://cdn.discordapp.com/attachments/816755257936969748/816765050567393280/unknown.png"
+                    alt=""
+                  />
+                  <img
+                    class="col-image img-browse"
+                    onclick="generateContent_11()"
+                    src="https://cdn.discordapp.com/attachments/816755257936969748/816765075326763079/unknown.png"
+                    alt=""
+                  />
+                  <img
+                    class="col-image img-browse"
+                    onclick="generateContent_12()"
+                    src="https://cdn.discordapp.com/attachments/816755257936969748/816765095307640872/unknown.png"
+                    alt=""
+                  />
+                  <img
+                    class="col-image img-browse"
+                    onclick="generateContent_13()"
+                    src="https://cdn.discordapp.com/attachments/816755257936969748/816765121271300116/unknown.png"
+                    alt=""
+                  />
+                  <img
+                    class="col-image img-browse"
+                    onclick="generateContent_14()"
+                    src="https://cdn.discordapp.com/attachments/816755257936969748/816765150006738974/unknown.png"
+                    alt=""
+                  />
+                  <img
+                    class="col-image img-browse"
+                    onclick="generateContent_15()"
+                    src="https://cdn.discordapp.com/attachments/816755257936969748/816765176400969778/unknown.png"
+                    alt=""
+                  />
+                  <img
+                    class="col-image img-browse"
+                    onclick="generateContent_16()"
+                    src="https://cdn.discordapp.com/attachments/816755257936969748/816765198747959367/unknown.png"
+                    alt=""
+                  />
+                  <img
+                    class="col-image img-browse"
+                    onclick="generateContent_17()"
+                    src="https://cdn.discordapp.com/attachments/816755257936969748/816765250212593714/unknown.png"
+                    alt=""
+                  />
+                  <img
+                    class="col-image img-browse"
+                    onclick="generateContent_18()"
+                    src="https://cdn.discordapp.com/attachments/816755257936969748/816765280440287282/unknown.png"
+                    alt=""
+                  />
+                  <img
+                    class="col-image img-browse"
+                    onclick="generateContent_19()"
+                    src="https://cdn.discordapp.com/attachments/816755257936969748/816767534509326406/unknown.png"
+                    alt=""
+                  />
+                  <img
+                    class="col-image img-browse"
+                    onclick="generateContent_20()"
+                    src="https://cdn.discordapp.com/attachments/816755257936969748/816767858096341052/unknown.png"
+                    alt=""
+                  />
+                  <img
+                    class="col-image img-browse"
+                    onclick="generateContent_21()"
+                    src="https://cdn.discordapp.com/attachments/816755257936969748/816768646931677224/unknown.png"
+                    alt=""
+                  />
+                  <img
+                    class="col-image img-browse"
+                    onclick="generateContent_22()"
+                    src="https://cdn.discordapp.com/attachments/816755257936969748/816768623472934952/unknown.png"
+                    alt=""
+                  />
+                  <img
+                    class="col-image img-browse"
+                    onclick="generateContent_23()"
+                    src="https://cdn.discordapp.com/attachments/816755257936969748/816768610503622686/unknown.png"
+                    alt=""
+                  />
+                </div>
               </div>
             </div>
             <div>

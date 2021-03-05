@@ -1,3 +1,26 @@
+const newAudio = new Audio("");
+const categories = [
+  6423436964,
+  3631248842,
+  4135818362,
+  878989033,
+  1699167521,
+  1479489455,
+  2578576804,
+  65489479,
+  1291471565,
+  1911222042,
+  1934257882,
+  1677006641,
+  2097558104,
+  8282573142,
+  4485213484,
+  2471369142,
+  1631844475,
+  2159765062,
+  7456464544,
+  3801761042,
+];
 async function getAlbums() {
   let search = document.querySelector(".spoti-search").value;
   const response = await fetch(
@@ -11,7 +34,7 @@ async function getAlbums() {
 }
 const displayResults = (data) => {
   let div = document.querySelector("#searchResults");
-
+  let musicBar = document.querySelector(".music-options");
   div.innerHTML = "";
   data.forEach((element) => {
     let text = document.createElement("div");
@@ -23,17 +46,23 @@ const displayResults = (data) => {
     cardContainer.classList.add("card-container-spotify");
 
     containerCardContainer.classList.add("col-8");
-    const newAudio = new Audio(`${element.preview}`);
-    newAudio.classList.add("isplaying");
+
     containerCardContainer.addEventListener("click", function playAu() {
-      let musicBar = document.querySelector(".music-options");
+      newAudio.classList.add("isplaying");
+
+      newAudio.src = `${element.preview}`;
+
+      musicBar.appendChild(newAudio);
       let cover = document.querySelector(".cover-img-small");
+      let title = document.querySelector(".songbar-title");
+      let titleSmall = document.querySelector(".artist-little");
+      title.innerText = `${element.title}`;
+      titleSmall.innerText = `${element.artist.name}`;
       cover.src = element.album.cover;
-      let audioRunning = false;
-      if (newAudio.paused !== true) {
-        newAudio.pause();
-      } else {
+      if (newAudio.paused == true) {
         newAudio.play();
+      } else {
+        newAudio.pause();
       }
     });
     img.classList.add("card-image");
@@ -54,83 +83,58 @@ const displayResults = (data) => {
   });
 };
 
+const generateCategories = () => {
+  let container = document.querySelector(".browse-all");
+  container.innerHTML = "";
+  categories.forEach(async (id) => {
+    await showCategories(id);
+    async function showCategories(id) {
+      const response = await fetch(
+        `https://spotify-fetch.herokuapp.com/https://api.deezer.com/playlist/${id}`
+      );
+      const data = await response.json();
+      console.log(data);
+
+      // data.forEach((data) => {
+      //   let img = document.createElement("img");
+      //   img.classList.add("col-image", "img-browse");
+      //   img.src = data.picture_xl;
+      //   img.addEventListener("click", function replaceContent() {
+      //     container.innerHTML = "";
+      //     data.forEach((element) => {
+      //       container.innerHTML = ` <header class="sticky-bg">
+      //       <div class="header-content">
+      //         <div class="text-wrapper-header">
+      //           <h1 id="title" style="font-size: 70px" class="font-bold">
+      //             Liked Songs
+      //           </h1>
+      //         </div>
+      //       </div>
+      //     </header>
+      //     <div id="magic-container" class="container-fluid">
+      //       <div class="title-seeMore">
+      //         <h4 class="font-regular" style="color: white">podcasts</h4>
+      //         <a class="seeMoreStyle" href=""
+      //           ><span style="color: white; font-size: 14px"
+      //             >SEE MORE</span
+      //           ></a
+      //         >
+      //       </div>
+      //       <div id="searchResults" class="row"></div>
+      //     </div>`;
+      //     });
+      //   });
+      // });
+      container.innerHTML += `<img class="col-image img-browse" onclick="generateContent(id)" src=${data.picture_xl} alt="">`;
+      return data;
+    }
+  });
+};
 const cards = document.querySelectorAll(".col-image");
 
-const generateContent_0 = () => {
-  window.location.assign(`/pages/hardcoded-0.html`);
-};
-const generateContent_1 = () => {
-  window.location.assign(`/pages/hardcoded-1.html`);
-};
-const generateContent_2 = () => {
-  window.location.assign(`/pages/hardcoded-2.html`);
-};
-const generateContent_3 = () => {
-  window.location.assign(`/pages/hardcoded-3.html`);
-};
-const generateContent_4 = () => {
-  window.location.assign(`/pages/hardcoded-4.html`);
-};
-const generateContent_5 = () => {
-  window.location.assign(`/pages/hardcoded-5.html`);
-};
-const generateContent_6 = () => {
-  window.location.assign(`/pages/hardcoded-6.html`);
-};
-const generateContent_7 = () => {
-  window.location.assign(`/pages/hardcoded-7.html`);
-};
-const generateContent_8 = () => {
-  window.location.assign(`/pages/hardcoded-8.html`);
-};
-const generateContent_9 = () => {
-  window.location.assign(`/pages/hardcoded-9.html`);
-};
-const generateContent_10 = () => {
-  window.location.assign(`/pages/hardcoded-10.html`);
-};
-const generateContent_11 = () => {
-  window.location.assign(`/pages/hardcoded-11.html`);
-};
-const generateContent_12 = () => {
-  window.location.assign(`/pages/hardcoded-12.html`);
-};
-const generateContent_13 = () => {
-  window.location.assign(`/pages/hardcoded-13.html`);
-};
-const generateContent_14 = () => {
-  window.location.assign(`/pages/hardcoded-14.html`);
-};
-const generateContent_15 = () => {
-  window.location.assign(`/pages/hardcoded-15.html`);
-};
-const generateContent_16 = () => {
-  window.location.assign(`/pages/hardcoded-16.html`);
-};
-const generateContent_17 = () => {
-  window.location.assign(`/pages/hardcoded-17.html`);
-};
-const generateContent_18 = () => {
-  window.location.assign(`/pages/hardcoded-18.html`);
-};
-const generateContent_19 = () => {
-  window.location.assign(`/pages/hardcoded-19.html`);
-};
-const generateContent_20 = () => {
-  window.location.assign(`/pages/hardcoded-20.html`);
-};
-const generateContent_21 = () => {
-  window.location.assign(`/pages/hardcoded-21.html`);
-};
-const generateContent_22 = () => {
-  window.location.assign(`/pages/hardcoded-22.html`);
-};
-const generateContent_23 = () => {
-  window.location.assign(`/pages/hardcoded-23.html`);
-};
-
-window.onload = function () {
+(window.onload = function () {
   for (let i = 0; i < cards.length; i++) {
     cards[i].classList.add(`playlist-${i}`);
   }
-};
+}),
+  generateCategories();
