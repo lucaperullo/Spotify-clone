@@ -14,7 +14,6 @@ const displayResults = (data) => {
 
   div.innerHTML = "";
   data.forEach((element) => {
-    console.log(element.preview);
     let text = document.createElement("div");
     let texty = document.createElement("p");
     let card = document.createElement("div");
@@ -28,6 +27,8 @@ const displayResults = (data) => {
     newAudio.classList.add("isplaying");
     containerCardContainer.addEventListener("click", function playAu() {
       let musicBar = document.querySelector(".music-options");
+      let cover = document.querySelector(".cover-img-small");
+      cover.src = element.album.cover;
       let audioRunning = false;
       if (newAudio.paused !== true) {
         newAudio.pause();
@@ -38,7 +39,7 @@ const displayResults = (data) => {
     img.classList.add("card-image");
     card.classList.add("card-body");
     texty.classList.add("card-text");
-    texty.innerText = `${element.album.title}`;
+    texty.innerText = `${element.title}`;
     text.classList.add("info");
     img.setAttribute("src", element.album.cover);
     img.classList.add("search-result");
