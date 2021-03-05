@@ -1,0 +1,376 @@
+div.jumbo-container {
+  height: 40vh;
+  max-height: none;
+  min-height: 340px;
+  color: #fff;
+  position: relative;
+  padding: 0 32px 24px;
+  display: flex;
+  overflow: hidden;
+  background-image: url("https://www.radionortefm.com/inicio/wp-content/uploads/2020/09/TI%C3%8BSTO-2020.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+div.jumbo-container div.jumbo-content {
+  flex: 1;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-flow: column;
+  justify-content: flex-end;
+  z-index: 0;
+}
+div.jumbo-container div.jumbo-content span.verified {
+  display: inline-block;
+  align-items: center;
+  gap: 4px;
+}
+div.jumbo-container div.jumbo-content span.verified > span {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: normal;
+  text-transform: none;
+}
+div.jumbo-container div.jumbo-content span.artist {
+  margin-top: 4px;
+  word-break: break-word;
+  overflow: hidden;
+  width: 100%;
+  text-align: left;
+}
+div.jumbo-container div.jumbo-content span.artist > h1 {
+  padding: 0.08em 0px;
+  font-size: 96px;
+  line-height: 96px;
+  visibility: visible;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  text-transform: none;
+}
+div.main {
+  isolation: isolate;
+  background-color: #121212;
+}
+div.main div.fluid-bg {
+  background-color: rgb(192, 240, 64);
+  height: 232px;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), #121212);
+}
+div.main div.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px 32px;
+  position: relative;
+  margin: 0;
+  max-width: 1955px;
+}
+div.main div.button-container div.button-row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+div.main div.button-container div.button-row button.play {
+  --size: 64px;
+  margin-right: 32px;
+  color: #fff;
+  background-color: #1db954;
+  font-size: 8px;
+  border: 0;
+  border-radius: 500px;
+  transition: transform 33ms cubic-bezier(0.3, 0, 0, 1),
+    -webkit-transform 33ms cubic-bezier(0.3, 0, 0, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: var(--size);
+  width: var(--size);
+  min-width: var(--size);
+}
+div.main div.button-container div.button-row button.follow {
+  margin-right: 24px;
+  border-color: #fff;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  background-color: transparent;
+  padding: 7px 15px;
+  border: 1px solid hsla(0, 0%, 100%, 0.3);
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+div.main div.button-container div.button-row button.toggle {
+  background: transparent;
+  border: 0;
+  color: hsla(0, 0%, 100%, 0.6);
+  padding: 0;
+}
+div.track-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+div.track-container h2 {
+  color: rgb(255, 255, 255);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: -0.04em;
+  text-transform: none;
+  margin: 0 0 20px;
+}
+div.track-info div.track-container {
+  flex: 1 1 400px;
+}
+ul.popular-tracks-list {
+  list-style: none;
+  height: 280px;
+}
+ul.popular-tracks-list li.track {
+  height: 56px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+ul.popular-tracks-list li.track div.start {
+  justify-self: flex-start;
+  flex-wrap: nowrap;
+}
+ul.popular-tracks-list li.track div.end {
+  justify-self: flex-end;
+  flex-wrap: nowrap;
+}
+ul.popular-tracks-list li.track span,
+button {
+  display: inline-block;
+  position: relative;
+}
+ul.popular-tracks-list li.track button.heart {
+  margin-right: 4px;
+  color: #1db954;
+  background: transparent;
+  border: none;
+}
+div.track-container button.see-more {
+  margin-left: 35px;
+  background: none;
+  border: none;
+  color: hsla(0, 0%, 100%, 0.7);
+}
+div.track-container button.see-more span {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #b3b3b3;
+}
+
+ul.popular-tracks-list li.track span.numbers {
+  color: #b3b3b3;
+  min-width: 16px;
+  min-height: 16px;
+}
+ul.popular-tracks-list li.track span.title {
+  color: #fff;
+  font-weight: 500;
+  white-space: unset;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+h2 {
+  color: rgb(255, 255, 255);
+  margin: 0 0 20px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: -0.04em;
+  text-transform: none;
+}
+div.artist-div {
+  padding-left: 15px;
+}
+div.artist-div div.content {
+  display: flex;
+  flex-direction: row;
+}
+div.artist-div div.content img {
+  margin-right: 16px;
+  object-fit: cover;
+  object-position: center center;
+}
+div.content div.column-artist {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+div.content div.column-artist span.postby {
+  white-space: unset;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: normal;
+  text-transform: none;
+  color: #b3b3b3;
+  display: inline-block;
+}
+div.content div.column-artist span.link {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+div.content div.column-artist span.link a {
+  color: #fff;
+  text-decoration: none;
+}
+button.about {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.7) 100%
+    ),
+    url("https://i.scdn.co/image/8599812885eb05c5ca968184b65f39d6402746ac");
+  background-repeat: no-repeat;
+  height: 516px;
+  background-color: #282828;
+  border: 0;
+  position: relative;
+  text-align: initial;
+  width: 100%;
+  border-radius: 8px;
+  background-size: cover;
+  transform: scale(1);
+  background-position: 50% 50%;
+  transition: transform 0.25s linear;
+}
+button.about div.badgeDiv {
+  right: 40px;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  color: #fff;
+  background: #2e77d0;
+  border-radius: 50%;
+  top: 40px;
+}
+button.about div.badgeDiv div.rank {
+  position: absolute;
+  top: 25%;
+  text-align: center;
+  width: 100%;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: -0.04em;
+  text-transform: none;
+}
+button.about div.badgeDiv div.world {
+  position: absolute;
+  top: 55%;
+  text-align: center;
+  width: 100%;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: normal;
+  text-transform: none;
+}
+#tour li a {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  padding: 8px;
+  border-radius: 4px;
+  margin-left: -8px;
+  margin-bottom: 8px;
+  color: #fff;
+  text-decoration: none;
+}
+#tour li a time {
+  flex: 0 0 72px;
+  margin-right: 16px;
+}
+div.button-container > div > button.play:hover {
+  transform: scale(1.1);
+}
+div.button-container > div > button.toggle svg:hover {
+  fill: white;
+  transform: scale(1.1);
+}
+li.track:hover {
+  background-color: rgba(99, 99, 99, 0.219);
+}
+div.bgSpotify:hover {
+  background-color: rgba(99, 99, 99, 0.219);
+}
+button.about:hover {
+  transform: scale(1.05);
+}
+.divCover {
+  position: relative;
+  margin-bottom: 16px;
+  padding: 0;
+  border: 0;
+}
+div.coverImgCir {
+  width: 100%;
+  padding-bottom: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+div.coverImgSq {
+  width: 100%;
+  padding-bottom: 100%;
+  position: relative;
+  background-color: #333;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 50%);
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+div.coverImgCir div img {
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  border-radius: 2px;
+  display: block;
+  object-fit: cover;
+  object-position: center center;
+}
+div.coverImgSq div img {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  border-radius: 2px;
+  display: block;
+  object-fit: cover;
+  object-position: center center;
+}
