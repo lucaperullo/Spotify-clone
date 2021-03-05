@@ -14,6 +14,7 @@ const displayResults = (data) => {
 
   div.innerHTML = "";
   data.forEach((element) => {
+    console.log(element.preview);
     let text = document.createElement("div");
     let texty = document.createElement("p");
     let card = document.createElement("div");
@@ -21,7 +22,19 @@ const displayResults = (data) => {
     let cardContainer = document.createElement("div");
     let containerCardContainer = document.createElement("div");
     cardContainer.classList.add("card-container-spotify");
+
     containerCardContainer.classList.add("col-8");
+    const newAudio = new Audio(`${element.preview}`);
+    newAudio.classList.add("isplaying");
+    containerCardContainer.addEventListener("click", function playAu() {
+      let musicBar = document.querySelector(".music-options");
+      let audioRunning = false;
+      if (newAudio.paused !== true) {
+        newAudio.pause();
+      } else {
+        newAudio.play();
+      }
+    });
     img.classList.add("card-image");
     card.classList.add("card-body");
     texty.classList.add("card-text");

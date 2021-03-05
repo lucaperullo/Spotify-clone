@@ -105,7 +105,7 @@ body {
 }
 #navbuttons-top {
   background-color: #13161998;
-  z-index: 1;
+  z-index: 2;
   top: 0;
   position: sticky;
   padding-left: 30px !important;
@@ -800,8 +800,16 @@ th {
 .img-browse:hover {
   transform: scale(1.1);
 }
+
+.controls-botbar {
+  display: flex;
+  color: white !important;
+}
+.playBtn {
+  height: 40px;
+}
 #magic-container {
-  background-color: rgba(0, 0, 0, 0.103);
+  background-color: rgba(0, 0, 0, 0.849);
   padding: 30px;
   position: absolute;
   top: 320px;
@@ -842,6 +850,7 @@ th {
 
 .music-options {
   display: flex;
+  justify-content: space-between;
 }
 .songbar-title:hover {
   text-decoration: underline !important;
@@ -915,6 +924,9 @@ th {
 }
 .responsive-navbar > li > a > .iconLib {
   margin-left: 25px;
+}
+.splide__pagination {
+  z-index: 0 !important;
 }
 /* MEDIA QUERIES */
 @media (max-width: 1883px) {
@@ -1222,4 +1234,42 @@ th {
 .title-seeMore {
   display: flex;
   justify-content: space-between;
+}
+.controls-right {
+  color: white;
+}
+.volume {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.volume input[type="range"] {
+  display: none;
+}
+.volume .icon-size {
+  font-size: 1rem;
+}
+.volume .bar-hoverbox {
+  padding: 10px 15px;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+.volume .bar-hoverbox:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+.volume .bar {
+  background: #999;
+  height: 7px;
+  width: 120px;
+  border-radius: 15px;
+  overflow: hidden;
+  pointer-events: none;
+}
+.volume .bar .bar-fill {
+  background: #fff;
+  width: 0%;
+  height: 100%;
+  background-clip: border-box;
+  pointer-events: none;
 }
