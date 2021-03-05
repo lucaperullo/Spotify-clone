@@ -1,6 +1,7 @@
 html {
   background-color: #131518;
   overflow-x: hidden;
+  font-family: "Circular" !important; 
 }
 body {
   position: relative;
@@ -563,6 +564,7 @@ ul ul a {
   border-radius: 4px;
   width: 100%;
   transition: background-color 0.3s ease;
+  margin-bottom: 15px;
 }
 
 .divCover {
@@ -603,6 +605,10 @@ div.buttonDiv {
   box-shadow: 0 8px 8px rgb(0 0 0 / 30%);
   z-index: 2;
   border-radius: 500px;
+}
+div.buttonDiv:hover{
+  visibility: visible;
+  transform: scale(1, 1.1);
 }
 div.buttonDiv button.playButton {
   --size: 40px;
@@ -814,6 +820,12 @@ th {
   position: absolute;
   top: 320px;
 }
+#liked-songs-container{
+  padding: 30px;
+  position: absolute;
+  top: 320px;
+}
+
 .header-content {
   padding-left: 40px;
   padding-top: 250px;
