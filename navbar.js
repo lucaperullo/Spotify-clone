@@ -19,3 +19,9 @@ const _navColorOnScroll_LIKED = () => {
 
   navbar.style.backgroundColor = `rgba(32, 22, 64, ${ratio * 10})`;
 };
+const _navColorOnScroll_PLAYLIST = () => {
+  const { scrollTop, scrollHeight, clientHeight } = main;
+  const ratio = scrollTop / (scrollHeight - clientHeight);
+
+  navbar.style.backgroundColor = `rgba(32, 22, 64, ${ratio * 10})`;
+};

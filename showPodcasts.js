@@ -1,19 +1,26 @@
 async function getPodcasts() {
-  let headerContent = document.querySelector(".header-content");
+  let headerContent = document.querySelector(".sticky-bg");
 
   let title = document.querySelector("#title");
-  let search = "Made" + " " + "for" + " " + "You";
+  let search = "Skrillex";
   title.innerText = search;
   const response = await fetch(
     "https://spotify-fetch.herokuapp.com/https://api.deezer.com/search?q=" +
       search
   );
-  const data = await response.json();
-  console.log(data);
-  displayPodcasts(data.data.splice(0, 6));
-  headerContent.style.backgroundImage = data.data.cover;
+  const data1 = await response.json();
+  const data = data1.data;
+  console.log(data1);
+  displayPodcasts(data1.data.splice(0, 6));
+
+  headerContent.style.backgroundImage = `url(${data1.data[0].artist.picture_xl})`;
+  headerContent.style.backgroundRepeat = "no-repeat";
+  headerContent.style.backgroundPosition = "start";
+  headerContent.style.backgroundSize = "cover";
+  playAudio(data1);
   return data;
 }
+
 const displayPodcasts = (data) => {
   let div = document.querySelector("#searchResults");
   let seeMore = document.querySelector(".seeMoreStyle");
@@ -50,6 +57,22 @@ const displayPodcasts = (data) => {
     containerCardContainer.appendChild(cardContainer);
     div.appendChild(containerCardContainer);
   });
+};
+
+async function getTracks(element) {
+  const response = await fetch(
+    `https://spotify-fetch.herokuapp.com/${element.album.tracklist}`
+  );
+  const data1 = await response.json();
+
+  console.log(data1.data);
+
+  return data1;
+}
+
+const playAudio = (data) => {
+  const newData = data.data;
+  newData.map((element) => getTracks(element));
 };
 
 window.onload = getPodcasts;
