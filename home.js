@@ -104,7 +104,7 @@ const showData1 = () => {
                 aria-hidden="false"
                 draggable="false"
                 loading="lazy"
-                src="${data.cover}"
+                src="${data.cover_xl}"
                 alt=""
               />
             </div>
@@ -189,7 +189,7 @@ const showData2 = () => {
                 aria-hidden="false"
                 draggable="false"
                 loading="lazy"
-                src="${data.picture}"
+                src="${data.picture_xl}"
                 alt=""
               />
             </div>
@@ -256,7 +256,7 @@ const showData3 = () => {
     async function showAlbums(id) {
       const response = await fetch(playlistURL + id);
       const data = await response.json();
-      
+
       console.log(data);
 
       let firstRow = document.getElementById("summer-playlists");
@@ -273,7 +273,7 @@ const showData3 = () => {
                 aria-hidden="false"
                 draggable="false"
                 loading="lazy"
-                src="${data.picture}"
+                src="${data.picture_xl}"
                 alt=""
               />
             </div>
@@ -340,7 +340,7 @@ const showData4 = () => {
     async function showAlbums(id) {
       const response = await fetch(playlistURL + id);
       const data = await response.json();
-      
+
       console.log(data);
 
       let firstRow = document.getElementById("throwback-playlists");
@@ -357,7 +357,7 @@ const showData4 = () => {
                 aria-hidden="false"
                 draggable="false"
                 loading="lazy"
-                src="${data.picture}"
+                src="${data.picture_xl}"
                 alt=""
               />
             </div>
@@ -404,31 +404,35 @@ const showData4 = () => {
     }
   });
 };
-const directToNewPage = () =>{
-  let a= document.querySelector(".title")
-  a.addEventListener("click", newContent())
-}
-const emptyContent = () =>{
-  let box = document.querySelector(".box");
-  box.classList.add("invisible")
-}
+// const directToNewPage = () =>{
+//   let a= document.querySelector(".title")
+//   a.addEventListener("click", newContent())
+// }
+// const emptyContent = () =>{
+//   let box = document.querySelector(".box");
+//   box.classList.add("invisible")
+// }
 
-const addContent = () =>{
-  let div = document.createElement("div")
-  div.classList.add("container-fluid")
-  div.setAttribute("id", "magic-container")
-    throwbackPlaylists.forEach(async (id) => {
-      await showAlbums(id);
-      async function showAlbums(id) {
-        const response = await fetch(playlistURL + id);
-        const data = await response.json();
-        
-        console.log(data);
-  
-        let firstRow = document.getElementById("throwback-playlists");
-        firstRow.classList.add("row");
-        firstRow.innerHTML +=
-}
-    });
-}
-window.onload = showData(), showData1(), showData2(), showData3(), showData4();
+// const addContent = () =>{
+//   let div = document.createElement("div")
+//   div.classList.add("container-fluid")
+//   div.setAttribute("id", "magic-container")
+//     throwbackPlaylists.forEach(async (id) => {
+//       await showAlbums(id);
+//       async function showAlbums(id) {
+//         const response = await fetch(playlistURL + id);
+//         const data = await response.json();
+
+//         console.log(data);
+
+//         let firstRow = document.getElementById("throwback-playlists");
+//         firstRow.classList.add("row");
+//         firstRow.innerHTML +=
+// }
+//     });
+// }
+(window.onload = showData()),
+  showData1(),
+  showData2(),
+  showData3(),
+  showData4();

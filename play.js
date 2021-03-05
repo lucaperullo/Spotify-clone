@@ -1,11 +1,17 @@
 const playAudioTrack = () => {
   let audio = document.querySelector(".isplaying");
   let pausebtn = document.querySelector("#pauseBtn");
+  let playbtn = document.querySelector("#playBtn");
   pausebtn.classList.toggle("d-none");
+  playbtn.classList.toggle("d-none");
   audio.play();
 };
 const pauseAudioTrack = () => {
   let audio = document.querySelector(".isplaying");
+  let playbtn = document.querySelector("#playBtn");
+  let pausebtn = document.querySelector("#pauseBtn");
+  playbtn.classList.toggle("d-none");
+  pausebtn.classList.toggle("d-none");
   audio.pause();
 };
 async function getPodcasts() {

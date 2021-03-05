@@ -44,8 +44,8 @@ const displayResults = (data) => {
     let cardContainer = document.createElement("div");
     let containerCardContainer = document.createElement("div");
     cardContainer.classList.add("card-container-spotify");
-
-    containerCardContainer.classList.add("col-8");
+    cardContainer.style.width = "12vw";
+    containerCardContainer.classList.add("col-sm-12", "col-md-4", "col-lg-2");
 
     containerCardContainer.addEventListener("click", function playAu() {
       newAudio.classList.add("isplaying");
@@ -70,7 +70,9 @@ const displayResults = (data) => {
     texty.classList.add("card-text");
     texty.innerText = `${element.title}`;
     text.classList.add("info");
-    img.setAttribute("src", element.album.cover);
+
+    img.style.width = "10vw";
+    img.setAttribute("src", element.album.cover_xl);
     img.classList.add("search-result");
 
     card.appendChild(img);
@@ -83,8 +85,58 @@ const displayResults = (data) => {
   });
 };
 
+let container = document.querySelector(".browse-all");
+
+const fetchTracklist = async (tracklist) => {
+  const response = await fetch(
+    "https://spotify-fetch.herokuapp.com/" + tracklist
+  );
+  const data = await response.json();
+  const newTracklist = data.data;
+
+  let container = document.querySelector(".container");
+  container.innerHTML = "";
+  console.log();
+  newTracklist.forEach((element) => {
+    container.innerHTML += ` <h3 class="section-category font-bold">${element.album.title}</h3>
+    <div class="container-fluid">
+      <div
+        id="recently-played"
+        class="row"
+        style="width: 100%"
+      ><div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 music-album-card bg">
+      <div class="bgSpotify">
+        <div class="divCover">
+          <div class="coverImg" style="background-image: url('${element.album.cover_xl}')">
+            <div>
+              <img aria-hidden="false" draggable="false" loading="lazy" src="${element.album.cover_xl}" alt="">
+            </div>
+          </div>
+          <div class="buttonDiv">
+            <button class="playButton d-none">
+              <svg height="16" role="img" width="16" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="5" y="3" width="4" height="18" fill="currentColor"></rect>
+                <rect x="15" y="3" width="4" height="18" fill="currentColor"></rect>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="card-body">
+          <a class="${element.album.title}" href="">
+            <div class="titleScroll">${element.album.title}</div>
+          </a>
+          <div class="info">
+            <span>${element.album.description}</span>
+          </div>
+        </div>
+      </div>
+    </div></div>
+    </div>
+    `;
+  });
+};
+
 const generateCategories = () => {
-  let container = document.querySelector(".browse-all");
   container.innerHTML = "";
   categories.forEach(async (id) => {
     await showCategories(id);
@@ -93,39 +145,8 @@ const generateCategories = () => {
         `https://spotify-fetch.herokuapp.com/https://api.deezer.com/playlist/${id}`
       );
       const data = await response.json();
-      console.log(data);
 
-      // data.forEach((data) => {
-      //   let img = document.createElement("img");
-      //   img.classList.add("col-image", "img-browse");
-      //   img.src = data.picture_xl;
-      //   img.addEventListener("click", function replaceContent() {
-      //     container.innerHTML = "";
-      //     data.forEach((element) => {
-      //       container.innerHTML = ` <header class="sticky-bg">
-      //       <div class="header-content">
-      //         <div class="text-wrapper-header">
-      //           <h1 id="title" style="font-size: 70px" class="font-bold">
-      //             Liked Songs
-      //           </h1>
-      //         </div>
-      //       </div>
-      //     </header>
-      //     <div id="magic-container" class="container-fluid">
-      //       <div class="title-seeMore">
-      //         <h4 class="font-regular" style="color: white">podcasts</h4>
-      //         <a class="seeMoreStyle" href=""
-      //           ><span style="color: white; font-size: 14px"
-      //             >SEE MORE</span
-      //           ></a
-      //         >
-      //       </div>
-      //       <div id="searchResults" class="row"></div>
-      //     </div>`;
-      //     });
-      //   });
-      // });
-      container.innerHTML += `<img class="col-image img-browse" onclick="generateContent(id)" src=${data.picture_xl} alt="">`;
+      container.innerHTML += `<img class="col-image img-browse" onclick="fetchTracklist('${data.tracklist}')" src="${data.picture_xl}" alt="${data.title}">`;
       return data;
     }
   });
