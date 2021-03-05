@@ -34,7 +34,7 @@ async function getAlbums() {
 }
 const displayResults = (data) => {
   let div = document.querySelector("#searchResults");
-  let musicBar = document.querySelector(".music-options");
+  let musicBar = document.querySelector("#player");
   div.innerHTML = "";
   data.forEach((element) => {
     let text = document.createElement("div");
@@ -53,12 +53,12 @@ const displayResults = (data) => {
       newAudio.src = `${element.preview}`;
 
       musicBar.appendChild(newAudio);
-      let cover = document.querySelector(".cover-img-small");
-      let title = document.querySelector(".songbar-title");
-      let titleSmall = document.querySelector(".artist-little");
+      let cover = document.querySelector(".player-cover-img");
+      let title = document.querySelector("#player-song-name");
+      let titleSmall = document.querySelector("#player-artist-name");
       title.innerText = `${element.title}`;
       titleSmall.innerText = `${element.artist.name}`;
-      cover.src = element.album.cover;
+      cover.style.backgroundImage = `url(${element.album.cover_xl})`;
       if (newAudio.paused == true) {
         newAudio.play();
       } else {

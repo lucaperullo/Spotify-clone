@@ -413,21 +413,6 @@ const showData4 = () => {
 //   box.classList.add("invisible")
 // }
 
-
-// const addContent = () =>{
-//   let div = document.createElement("div")
-//   div.classList.add("container-fluid")
-//   div.setAttribute("id", "magic-container")
-//     throwbackPlaylists.forEach(async (id) => {
-//       await showAlbums(id);
-//       async function showAlbums(id) {
-//         const response = await fetch(playlistURL + id);
-//         const data = await response.json();
-        
-//         console.log(data);
-  
-=======
-
 // const addContent = () =>{
 //   let div = document.createElement("div")
 //   div.classList.add("container-fluid")
@@ -440,6 +425,17 @@ const showData4 = () => {
 
 //         console.log(data);
 
+// const addContent = () =>{
+//   let div = document.createElement("div")
+//   div.classList.add("container-fluid")
+//   div.setAttribute("id", "magic-container")
+//     throwbackPlaylists.forEach(async (id) => {
+//       await showAlbums(id);
+//       async function showAlbums(id) {
+//         const response = await fetch(playlistURL + id);
+//         const data = await response.json();
+
+//         console.log(data);
 
 //         let firstRow = document.getElementById("throwback-playlists");
 //         firstRow.classList.add("row");
@@ -448,7 +444,8 @@ const showData4 = () => {
 //     });
 // }
 
-window.onload = showData(), showData1(), showData2(), showData3(), showData4();
-
-
-
+(window.onload = showData()),
+  showData1(),
+  showData2(),
+  showData3(),
+  showData4();
