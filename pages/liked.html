@@ -301,65 +301,54 @@
         </div>
       </div>
     </div>
-    <div class="music-bar-spotify">
-      <div class="music-options">
-        <div class="d-flex">
-          <img
-            class="cover-img-small"
-            src="https://i.scdn.co/image/ab67616d000048517a9bf5f82e32d33d4503fe7b"
-            alt=""
-          />
-          <div class="row">
-            <div class="col-12">
-              <div class="title-artist-col">
-                <a class="songbar-title" href="#">Title</a>
-              </div>
-              <div class="title-artist-col">
-                <a class="artist-little" href="#">Artist</a>
-              </div>
-            </div>
+    <section id="player">
+      <div class="track-nav center">
+        <div id="player-album-info" class="d-flex justify-content-start align-items-center">
+          <div class="player-cover-img"></div>
+          <div class="song-title-info">
+            <div id="player-song-name" class="song-title-small">Really Love (feat. Craig Da...</div>
+            <div id="player-artist-name" class="song-artist-small artist">Ksi, Craig David, Digital Farm Animals</div>
           </div>
         </div>
-
-        <div class="controls-botbar">
-          <i
-            id="playBtn"
-            onclick="playAudioTrack()"
-            class="fab fa-playstation"
-          ></i>
-          <i
-            id="pauseBtn"
-            onclick="pauseAudioTrack()"
-            class="far fa-pause-circle"
-          ></i>
+    
+        <div class="player d-flex flex-column justify-content-center align-items-center">
+          <div class="buttons w-100 center">
+            <i class="fas fa-random"></i>
+    
+            <button id="player-pre">
+              <i class="fas fa-step-backward"></i>
+            </button>
+    
+            <button id="player-play" onclick="playMusic()">
+              <i id="play_img" class="fa fa-play"></i>
+            </button>
+    
+            <button id="player-next">
+              <i class="fas fa-step-forward"></i>
+            </button>
+            <i class="fas fa-redo"></i>
+          </div>
+          <div class="controls d-flex align-items-center">
+            <div class="track-time-current">00:00</div>
+            <input
+              id="player-duration-bar"
+              class="level"
+              type="range"
+              min="0"
+              max="100"
+              value="0"
+              onclick="changeSongPlace(this.value)"
+            />
+            <div class="track-time-to-finish">00:30</div>
+          </div>
         </div>
-        <div class="controls-right">
-          <div>
-            <i class="fas fa-list-ol"></i>
-            <i class="fas fa-desktop"></i>
-          </div>
-          <div>
-            <div class="volume">
-              <input
-                type="range"
-                min="0"
-                max="100"
-                value="50"
-                class="volume-range"
-              />
-              <div class="icon">
-                <i class="fa fa-volume-up icon-size" aria-hidden="true"></i>
-              </div>
-              <div class="bar-hoverbox">
-                <div class="bar">
-                  <div class="bar-fill"></div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="volume">
+          <i id="volume-icon" class="fa fa-volume-off mr-3"></i>
+          <input type="range" value="20" min="0" max="100" onchange="changeVolume(this.value)" />
         </div>
       </div>
-    </div>
+    </section>
+    
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
