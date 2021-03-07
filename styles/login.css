@@ -14,12 +14,9 @@ body {
   margin-top: -5px;
 }
 .box {
-  padding-left: 20vh;
-  padding-right: 20vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
 }
 
 .fab {
@@ -37,7 +34,7 @@ body {
 .phone-shortcuts {
   display: none;
 }
-.box > .btn {
+.bgwrap > .btn {
   font-size: 14px !important;
   letter-spacing: 2px !important;
   width: 450px;
@@ -64,7 +61,6 @@ body {
 .btn.gg {
   color: grey;
   background-color: rgb(255, 255, 255);
-  border: 2px solid grey;
 }
 .btn.gg:hover {
   color: white;
@@ -123,7 +119,7 @@ body {
   border: 1px solid black;
 }
 .input {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Circular";
   margin-bottom: 11px;
   font-weight: 600;
   border: 1px solid rgb(194, 194, 194);
@@ -150,7 +146,7 @@ body {
   padding-top: 2px;
 }
 input[type="checkbox"] + label {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Circular";
   font-size: 14px;
   font-weight: 400;
   display: flex;
@@ -196,6 +192,7 @@ hr {
   }
   .btn {
     width: 90vw !important;
+    overflow: hidden;
   }
   .container.lines {
     width: 90vw !important;
@@ -215,6 +212,7 @@ hr {
   }
   .btn.log {
     width: 40vw !important;
+    overflow: hidden;
   }
   .linktogg.font-bold {
     width: 90vw !important;

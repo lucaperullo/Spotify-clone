@@ -1,55 +1,401 @@
 @font-face {
-  font-family: "Circular";
-  src: url("https://www.bu.edu/cdn/fonts/Circular/Circular-Book.eot%");
-  src: url("https://www.bu.edu/cdn/fonts/Circular/Circular-Book.eot?#iefix%")
-      format("embedded-opentype"),
-    url("https://www.bu.edu/cdn/fonts/Circular/Circular-Book.woff%")
-      format("woff"),
-    url("https://www.bu.edu/cdn/fonts/Circular/Circular-Book.ttf%")
-      format("truetype");
-  font-style: normal;
+  font-family: "Circular-black";
+  src: url("/fonts/lineto-circular-black.ttf") format("woff");
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "Circular-pro-medium";
+  src: url("/fonts/lineto-circular-pro-medium.ttf") format("woff");
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "Circular-pro-bold";
+  src: url("/fonts/lineto-circular-pro-bold.ttf") format("woff");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Circular-pro-book";
+  src: url("/fonts/lineto-circular-pro-book.ttf") format("woff");
   font-weight: 400;
-}
-
-@font-face {
-  font-family: "Circular";
-  src: url("https://www.bu.edu/cdn/fonts/Circular/Circular-Bold.eot%");
-  src: url("https://www.bu.edu/cdn/fonts/Circular/Circular-Bold.eot?#iefix%")
-      format("embedded-opentype"),
-    url("https://www.bu.edu/cdn/fonts/Circular/Circular-Bold.woff%")
-      format("woff"),
-    url("https://www.bu.edu/cdn/fonts/Circular/Circular-Bold.ttf%")
-      format("truetype");
-  font-style: normal;
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: "Circular";
-  src: url("https://www.bu.edu/cdn/fonts/Circular/Circular-Black.eot%");
-  src: url("https://www.bu.edu/cdn/fonts/Circular/Circular-Black.eot?#iefix%")
-      format("embedded-opentype"),
-    url("https://www.bu.edu/cdn/fonts/Circular/Circular-Black.woff%")
-      format("woff"),
-    url("https://www.bu.edu/cdn/fonts/Circular/Circular-Black.ttf%")
-      format("truetype");
-  font-style: normal;
-  font-weight: 900;
 }
 
 .font-light {
-  font-family: "Circular", sans-serif;
-  font-weight: 300;
+  font-family: "Circular-pro-book";
+  font-weight: 100;
 }
 .font-regular {
-  font-family: "Circular", sans-serif;
-  font-weight: 400;
+  font-family: "Circular-pro-medium";
+  font-weight: 200;
 }
 .font-chubby {
-  font-family: "Circular", sans-serif;
-  font-weight: 600;
+  font-family: "Circular-black";
+  font-weight: 300;
 }
 .font-bold {
-  font-family: "Circular", sans-serif;
-  font-weight: 700;
+  font-family: "Circular-pro-bold";
+  font-weight: 400;
+}
+
+#login-button {
+  text-decoration: none;
+  text-align: center;
+
+  color: #fff;
+
+  text-transform: uppercase;
+  box-sizing: border-box;
+  background: linear-gradient(
+    90deg,
+    #0c9148,
+    #22c50d,
+    #0c9148,
+    #08b363,
+    #08b37f,
+    #08b363,
+    #0c9148,
+    #22c50d,
+    #0c9148
+  );
+  background-size: 400%;
+}
+#login-button:hover {
+  color: whitesmoke;
+  text-decoration: none;
+  animation: animate 8s linear infinite;
+}
+@keyframes animate {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
+#login-button:before {
+  content: "";
+
+  z-index: -1;
+  background: linear-gradient(
+    90deg,
+    #0c9148,
+    #22c50d,
+    #0c9148,
+    #08b363,
+    #08b37f,
+    #08b363,
+    #0c9148,
+    #22c50d,
+    #0c9148
+  );
+  background-size: 400%;
+  border-radius: 40px;
+  filter: blur(20px);
+  opacity: 0;
+  transition: 0.5s;
+}
+#login-button:hover:before {
+  filter: blur(20px);
+  opacity: 1;
+  animation: animate 8s linear infinite;
+}
+#login-button:hover {
+  color: whitesmoke;
+  text-decoration: none;
+  animation: animate 8s linear infinite;
+}
+@keyframes animate {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
+
+/* FACEBOOK BUTTON */
+#facebook-button {
+  text-decoration: none;
+  text-align: center;
+  line-height: 60px;
+  color: #fff;
+  font-size: 24px;
+  color: #fff;
+
+  text-transform: uppercase;
+  box-sizing: border-box;
+  background: linear-gradient(
+    90deg,
+    #2b4bb6,
+    #1294eb,
+    #128ada,
+    #139df8,
+    #25186e,
+    #2d5099,
+    #3a5795,
+    #324dbd,
+    #402f8d
+  );
+  background-size: 400%;
+}
+#facebook-button:hover {
+  color: whitesmoke;
+  text-decoration: none;
+  animation: animate 8s linear infinite;
+}
+@keyframes animate {
+  0% {
+    background-position: 0%;
+  }
+
+  100% {
+    background-position: 400%;
+  }
+}
+#facebook-button:before {
+  content: "";
+
+  z-index: -1;
+  background: linear-gradient(
+    90deg,
+    #2b4bb6,
+    #25186e,
+    #1294eb,
+    #25186e,
+    #2d5099,
+    #3a5795,
+    #128ada,
+    #324dbd,
+    #2f488d,
+    #139df8
+  );
+  background-size: 400%;
+  border-radius: 40px;
+  filter: blur(20px);
+  opacity: 0;
+  transition: 0.5s;
+}
+#facebook-button:hover:before {
+  filter: blur(20px);
+  opacity: 1;
+  animation: animate 8s linear infinite;
+}
+#facebook-button:hover {
+  color: whitesmoke;
+  text-decoration: none;
+  animation: animate 8s linear infinite;
+}
+@keyframes animate {
+  0% {
+    background-position: 0%;
+  }
+
+  100% {
+    background-position: 400%;
+  }
+}
+/* APPLE BUTTON */
+#apple-button {
+  text-decoration: none;
+  text-align: center;
+  line-height: 60px;
+  color: #fff;
+  font-size: 24px;
+  color: #fff;
+
+  text-transform: uppercase;
+  box-sizing: border-box;
+  background: linear-gradient(
+    90deg,
+    #08070d,
+    #151316,
+    #414288,
+    #fb4d3d,
+    #e40066,
+    #2d5099,
+    #3a5795,
+    #324dbd,
+    #700c0a
+  );
+  background-size: 400%;
+}
+#apple-button:hover {
+  color: whitesmoke;
+  text-decoration: none;
+  animation: animate 8s linear infinite;
+}
+@keyframes animate {
+  0% {
+    background-position: 0%;
+  }
+
+  100% {
+    background-position: 400%;
+  }
+}
+#apple-button:before {
+  content: "";
+
+  z-index: -1;
+  background: linear-gradient(
+    90deg,
+    #08070d,
+    #151316,
+    #414288,
+    #fb4d3d,
+    #e40066,
+    #2d5099,
+    #3a5795,
+    #324dbd,
+    #700c0a
+  );
+  background-size: 400%;
+  border-radius: 40px;
+  filter: blur(20px);
+  opacity: 0;
+  transition: 0.5s;
+}
+#apple-button:hover:before {
+  filter: blur(20px);
+  opacity: 1;
+  animation: animate 8s linear infinite;
+}
+#apple-button:hover {
+  color: whitesmoke;
+  text-decoration: none;
+  animation: animate 8s linear infinite;
+}
+@keyframes animate {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
+/* GOOGLE BUTTON */
+#google-button {
+  text-decoration: none;
+  text-align: center;
+  line-height: 60px;
+  color: #fff;
+  font-size: 24px;
+  color: #fff;
+
+  text-transform: uppercase;
+  box-sizing: border-box;
+  background: linear-gradient(
+    90deg,
+    #575555,
+    #505152,
+    #4c4c4d,
+    #3f3d3d,
+    #272626,
+    #373837,
+    #636261,
+    #949494,
+    #7e7d7d
+  );
+  background-size: 400%;
+}
+#google-button:hover {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  animation: animate 4s linear infinite;
+}
+@keyframes animate {
+  0% {
+    background-position: 0%;
+  }
+
+  100% {
+    background-position: 400%;
+  }
+}
+
+#google-button:before {
+  content: "";
+
+  z-index: -1;
+  background: linear-gradient(
+    90deg,
+    #575555,
+    #505152,
+    #4c4c4d,
+    #3f3d3d,
+    #272626,
+    #373837,
+    #636261,
+    #949494,
+    #7e7d7d
+  );
+  background-size: 400%;
+  border-radius: 40px;
+  filter: blur(20px);
+  opacity: 0;
+  transition: 0.5s;
+}
+#google-button:hover:before {
+  filter: blur(20px);
+  opacity: 1;
+  animation: animate 8s linear infinite;
+}
+#google-button:hover {
+  color: rgb(248, 247, 247);
+  text-decoration: none;
+  animation: animate 6s linear infinite;
+}
+@keyframes animate {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
+.wrapper {
+  animation: bgmoving 400s linear infinite;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+}
+.content-signup {
+  background-color: rgba(241, 236, 236, 0.418);
+  backdrop-filter: blur(18px);
+}
+
+body {
+  overflow-x: hidden;
+}
+.bgwrap {
+  padding-bottom: 100px;
+  background: rgba(125, 115, 146, 0.452);
+  backdrop-filter: blur(40px);
+  z-index: 2;
+  height: 200%;
+  width: 200%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.box {
+  animation: shrink 10s linear infinite;
+  z-index: -1;
+  padding-bottom: 100px;
+  margin-top: -7px;
+  background-image: url("https://trello-backgrounds.s3.amazonaws.com/SharedBackground/2133x1600/f31a4da578d63b601c05e4f5f0ababb7/photo-1614680376593-902f74cf0d41.jpg");
+}
+@keyframes shrink {
+  0% {
+    background-size: 100%;
+  }
+  50% {
+    background-size: 10%;
+  }
+  100% {
+    background-size: 100%;
+  }
 }

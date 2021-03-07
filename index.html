@@ -23,6 +23,16 @@
     <link rel="stylesheet" href="/styles/login.css" />
 
     <title>Login - Spotify</title>
+    <style>
+      #myVideo {
+        z-index: -1;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+      }
+    </style>
   </head>
   <body>
     <div class="header">
@@ -35,77 +45,85 @@
     <hr style="margin-top: 20px" />
 
     <div class="box">
-      <h4 style="margin-top: 20px" class="font-bold">
-        To continue, log in to Spotify.
-      </h4>
-
-      <button class="btn fb font-bold">
-        <i class="fab fa-facebook"></i> CONTINUE WITH FACEBOOK
-      </button>
-
-      <button class="btn ap font-bold">
-        <i class="fab fa-apple"></i> CONTINUE WITH APPLE
-      </button>
-
-      <button class="btn gg font-bold">
-        <i class="fab fa-google"></i>
-        CONTINUE WITH GOOGLE
-      </button>
-      <div class="container lines">
-        <div class="line"><hr style="margin-top: 28px" /></div>
-        <p class="ptag font-bold">OR</p>
-        <div class="line"><hr style="margin-top: 28px" /></div>
-      </div>
-      <div style="width: 448px" class="mb-3">
-        <label style="margin-bottom: 50px" class="font-bold"
-          >Email address or username</label
-        ><br />
-        <input
-          class="input email"
-          type="email"
-          placeholder="Email address or username"
-        /><br />
-        <label style="margin-bottom: 5px" class="font-bold pass">Password</label
-        ><br />
-        <input
-          style="margin-bottom: 20px"
-          class="input password"
-          type="password"
-          placeholder="Password"
-        /><br />
-        <a
-          style="margin-top: 20px"
-          class="link font-light"
-          href="./pages/home.html"
-          >Forgot your password?</a
+      <div class="bgwrap">
+        <h4 style="margin-top: 20px" class="font-bold">
+          To continue, log in to Spotify.
+        </h4>
+        <a id="facebook-button" class="btn fb font-bold" href="#"
+          ><i class="fab fa-facebook"></i> CONTINUE WITH FACEBOOK</a
         >
-      </div>
-      <div>
-        <div class="endbuttons lines">
-          <form>
-            <input type="checkbox" id="fruit1" name="fruit-1" value="" />
 
-            <label for="fruit1"
-              ><span class="text-fix">Remember me</span></label
-            >
-          </form>
+        <button id="apple-button" class="btn ap font-bold">
+          <i class="fab fa-apple"></i> CONTINUE WITH APPLE
+        </button>
 
-          <button
-            type="submit"
-            id="button-login"
-            class="btn log font-bold"
-            onclick="login()"
-          >
-            LOG IN
-          </button>
+        <button id="google-button" class="btn gg font-bold">
+          <i class="fab fa-google"></i>
+          CONTINUE WITH
+          <a style="color: #4081ec; text-decoration: none" href="">G</a>
+          <a style="color: #e34133; text-decoration: none" href="">O</a>
+          <a style="color: #f3b605; text-decoration: none" href="">O</a>
+          <a style="color: #4081ec; text-decoration: none" href="">G</a>
+          <a style="color: #32a350; text-decoration: none" href="">L</a>
+          <a style="color: #e34133; text-decoration: none" href="">E</a>
+        </button>
+        <div class="container lines">
+          <div class="line"><hr style="margin-top: 28px" /></div>
+          <p class="ptag font-bold">OR</p>
+          <div class="line"><hr style="margin-top: 28px" /></div>
         </div>
-        <hr />
+        <div style="width: 448px" class="mb-3">
+          <label style="margin-bottom: 50px" class="font-bold"
+            >Email address or username</label
+          ><br />
+          <input
+            class="input email"
+            type="email"
+            placeholder="Email address or username"
+          /><br />
+          <label style="margin-bottom: 5px" class="font-bold pass"
+            >Password</label
+          ><br />
+          <input
+            style="margin-bottom: 20px"
+            class="input password"
+            type="password"
+            placeholder="Password"
+          /><br />
+          <a
+            style="margin-top: 20px"
+            class="link font-light"
+            href="./pages/home.html"
+            >Forgot your password?</a
+          >
+        </div>
+        <div>
+          <div class="endbuttons lines">
+            <form>
+              <input type="checkbox" id="fruit1" name="fruit-1" value="" />
+
+              <label for="fruit1"
+                ><span class="text-fix">Remember me</span></label
+              >
+            </form>
+
+            <button
+              type="submit"
+              id="login-button"
+              class="btn log font-bold"
+              onclick="login()"
+            >
+              LOG IN
+            </button>
+          </div>
+          <hr />
+        </div>
+        <h4 class="font-bold">Don't have an account?</h4>
+        <br />
+        <a class="linktogg font-bold" href="./pages/signup.html"
+          >SIGN UP FOR SPOTIFY
+        </a>
       </div>
-      <h4 class="font-bold">Don't have an account?</h4>
-      <br />
-      <a class="linktogg font-bold" href="./pages/signup.html"
-        >SIGN UP FOR SPOTIFY
-      </a>
     </div>
     <footer></footer>
     <script src="./login.js"></script>

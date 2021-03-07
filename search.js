@@ -34,7 +34,7 @@ async function getAlbums() {
 }
 const displayResults = (data) => {
   let div = document.querySelector("#searchResults");
-  let musicBar = document.querySelector(".music-options");
+  let musicBar = document.querySelector("#player");
   div.innerHTML = "";
   data.forEach((element) => {
     let text = document.createElement("div");
@@ -44,8 +44,14 @@ const displayResults = (data) => {
     let cardContainer = document.createElement("div");
     let containerCardContainer = document.createElement("div");
     cardContainer.classList.add("card-container-spotify");
+
     cardContainer.style.width = "12vw";
-    containerCardContainer.classList.add("col-sm-12", "col-md-4", "col-lg-2");
+    containerCardContainer.classList.add(
+      "col-xs-12",
+      "col-sm-6",
+      "col-md-4",
+      "col-lg-2"
+    );
 
     containerCardContainer.addEventListener("click", function playAu() {
       newAudio.classList.add("isplaying");
@@ -53,17 +59,13 @@ const displayResults = (data) => {
       newAudio.src = `${element.preview}`;
 
       musicBar.appendChild(newAudio);
-      let cover = document.querySelector(".cover-img-small");
-      let title = document.querySelector(".songbar-title");
-      let titleSmall = document.querySelector(".artist-little");
+      let cover = document.querySelector(".player-cover-img");
+      let title = document.querySelector("#player-song-name");
+      let titleSmall = document.querySelector("#player-artist-name");
       title.innerText = `${element.title}`;
       titleSmall.innerText = `${element.artist.name}`;
-      cover.src = element.album.cover;
-      if (newAudio.paused == true) {
-        newAudio.play();
-      } else {
-        newAudio.pause();
-      }
+      cover.style.backgroundImage = `url(${element.album.cover_xl})`;
+      newAudio.play !== false ? newAudio.play() : newAudio.pause();
     });
     img.classList.add("card-image");
     card.classList.add("card-body");

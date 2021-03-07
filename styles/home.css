@@ -715,7 +715,8 @@ div.card-body div.info span {
   padding: 10px;
   background-color: rgba(128, 128, 128, 0.055);
   margin-bottom: 10px;
-  margin-right: 10px;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 .card-container-spotify:hover {
   background-color: rgba(128, 128, 128, 0.178);
@@ -907,6 +908,9 @@ th {
 .logout-responsive {
   display: none;
 }
+.card-image {
+  width: 100px !important;
+}
 .responsive-navbar {
   display: none;
   border-top: 1px solid black;
@@ -1032,15 +1036,17 @@ th {
   .card-image {
     width: 12vw;
   }
-  .card-container-spotify {
-    width: 14vw;
-  }
 
   .col-8 {
     width: 21%;
   }
 }
-
+@media (min-width: 992px) {
+  .col-lg-2 {
+    flex: 0 0 auto;
+    width: 24.666667%;
+  }
+}
 @media (max-width: 1291px) {
   .spoti-search {
     width: 25vw;
@@ -1048,9 +1054,7 @@ th {
   .card-image {
     width: 12vw;
   }
-  .card-container-spotify {
-    width: 14vw;
-  }
+
   .col-8 {
     width: 23%;
   }
@@ -1075,7 +1079,7 @@ th {
     width: 10vw;
   }
   .card-container-spotify {
-    width: 12vw;
+    width: auto !important;
   }
   .col-8 {
     width: 25%;
@@ -1089,7 +1093,7 @@ th {
     width: 16vw;
   }
   .card-container-spotify {
-    width: 19vw;
+    width: auto !important;
   }
   .col-8 {
     width: 30%;
@@ -1124,7 +1128,7 @@ th {
     width: 18vw;
   }
   .card-container-spotify {
-    width: 22vw;
+    width: auto !important;
   }
   .col-8 {
     width: 32%;
@@ -1137,11 +1141,17 @@ th {
   #sidebar {
     display: none;
   }
+  .div-info {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
   .card-image {
-    width: 25vw;
+    width: 270px !important;
   }
   .card-container-spotify {
-    width: 28vw;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 450px !important;
   }
   .col-8 {
     width: 40%;
