@@ -393,9 +393,10 @@ body {
     background-size: 100%;
   }
   50% {
-    background-size: 10%;
+    background-size: 87%;
   }
   100% {
+    transform: rotate();
     background-size: 100%;
   }
 }
