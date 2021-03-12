@@ -28,25 +28,24 @@ async function getAlbums() {
       search
   );
   const data = await response.json();
-  console.log(data);
+
   displayResults(data.data);
   return data;
 }
 const displayResults = (data) => {
-  console.log(data);
   let div = document.querySelector("#searchResults");
-  let musicBar = document.querySelector("#player");
+
   div.innerHTML = "";
   div.innerHTML = `<div class="row">
   <div class="col-sm-12 col-md-3">
   <div onclick="redirect()" class="artist-search">
-  <img src="${data[0].artist.picture_xl}" height="70"/>
+  <img class="search-img-result" src="${data[0].artist.picture_xl}" height="70"/>
   <p>${data[0].artist.name}</p>
   <p>${data[0].artist.type}</p>
   </div>
   </div>
   <div class="col-sm-12 col-md-9">
-  <ul><li class="d-flex li-styled"><img src="${data[0].album.cover_xl}" height="40"/> <a>${data[0].title}</a></li><li class="d-flex li-styled"><img src="${data[1].album.cover_xl}" height="40"/> <a>${data[1].title}</a></li><li class="d-flex li-styled"><img src="${data[2].album.cover_xl}" height="40"/> <a>${data[2].title}</a></li><li class="d-flex li-styled"><img src="${data[3].album.cover_xl}" height="40"/> <a>${data[3].title}</a></li></ul>
+  <ul><li onclick="playMusic()" class="d-flex li-styled"><audio class="audio-search-page" src="${data[0].preview}"></audio><img class="search-img-song" src="${data[0].album.cover_xl}" height="40"/> <a>${data[0].title}</a></li><li onclick="playMusic()" class="d-flex li-styled"><audio class="audio-search-page" src="${data[1].preview}"></audio><img class="search-img-song" src="${data[1].album.cover_xl}" height="40"/> <a>${data[1].title}</a></li><li onclick="playMusic()" class="d-flex li-styled"><audio class="audio-search-page" src="${data[2].preview}"></audio><img class="search-img-song" src="${data[2].album.cover_xl}" height="40"/> <a>${data[2].title}</a></li><li onclick="playMusic()" class="d-flex li-styled"><audio class="audio-search-page" src="${data[3].preview}"></audio><img class="search-img-song" src="${data[3].album.cover_xl}" height="40"/> <a>${data[3].title}</a></li></ul>
   </div>
   </div>`;
 };

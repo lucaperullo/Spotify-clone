@@ -1476,8 +1476,22 @@ input.track-length {
   padding-right: 10px;
 }
 .li-styled {
+  transition: 0.2s ease;
   padding: 4px;
 }
 .li-styled:hover {
   background-color: rgba(255, 255, 255, 0.103);
+}
+.search-img-result {
+  border-radius: 50%;
+}
+.artist-search {
+  transition: 0.2s ease;
+  border-radius: 4px;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.055);
+  padding: 20px;
+}
+.artist-search:hover {
+  background-color: rgba(255, 255, 255, 0.13);
 }
